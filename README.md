@@ -16,13 +16,20 @@ Team meeting (2022/3/3)
 
 Team meeting (2022/3/5)
 -everyone read the business requirment
--create a draft version for patient and doctor
--create a prototype in Adobe XD
+-dicuss what section, what function we need
+-everyone should have a brief version of Diabetes@Home before next meeting
+
+Team meeting (2022/3/9)
+-dicuss the detail 
+-create prototype
+-How we build the static website :'About Us','About Diabetes'
+-have a draft version 
 
 Team meeting (2022/3/10)
 -edit prototype after get response from the tutor
--upload version 1 
+-upload version 1 into github
 
 Team meeting (2022/3/13)
--upload version 2 
+-discuss the detial
+-upload version 2 into github
 
