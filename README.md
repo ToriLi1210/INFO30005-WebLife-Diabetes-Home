@@ -20,16 +20,15 @@ Team meeting (2022/3/5)
 -everyone should have a brief version of Diabetes@Home before next meeting
 
 Team meeting (2022/3/9)
--dicuss the detail 
 -create prototype
 -How we build the static website :'About Us','About Diabetes'
--have a draft version 
+-have a skeleton 
 
 Team meeting (2022/3/10)
 -edit prototype after get response from the tutor
--upload version 1 into github
+-upload version 1 github 
 
 Team meeting (2022/3/13)
--discuss the detial
--upload version 2 into github
+-discuss the page of dashboard
+-upload version 2 github
 
