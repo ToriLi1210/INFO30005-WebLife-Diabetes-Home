@@ -32,3 +32,12 @@ Team meeting (2022/3/13)
 -discuss the page of dashboard
 -upload version 2 github
 
+Team meeting(2022/3/17)
+--update patient version
+-create motivation page 
+-create (excercise/insulin/weight) page
+-update two static webpage (more detail)
+-create patient profile
+-connection between each page (overlay,transition)
+--upgrade our desktop version
+
