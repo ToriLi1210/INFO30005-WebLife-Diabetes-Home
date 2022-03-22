@@ -32,7 +32,7 @@ body {
 #Top-header h2 {
 	font-size: 20px;
 }
-=================
+
 .mid{
 }
 
@@ -52,15 +52,24 @@ body {
 }
 
 #ft a{
-	padding：-10px;
+	padding: -10px;
 }
 
 #foot {
 	background-color: #ABB1AB;
-	height:281px;
+	height:400px;
 	margin-right:-20px;
-	margin-left:-20px;
-	
+	margin-left:-20px;	
 }
-
-	
+#foot-left{
+	float: left;
+	text-align: left;
+}
+#foot-right{
+	float: right;
+	text-align: left;
+}
+#copyright{
+	clear: both;
+	text-align: center;
+}
