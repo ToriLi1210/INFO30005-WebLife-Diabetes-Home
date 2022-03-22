@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#Top-header{
+	color:#707070;
+	border-bottom-left-radius:80px;
+	border-bottom-right-radius:80px;
+	background-color:#CADECA
+}
+
+#Top-header header {
+	font-size: 40px;
+}
+
+#Top-header h1 {
+	font-size: 25px;
+	color:#494949;
+}
+
+#Top-header p {
+	font-size: 14px;
+}
+#Top-header h2 {
+	font-size: 20px;
+}
+
+
+#middle p {
+	font-size: 14px;
+}
+
+#foot h2 {
+	font-size: 20px;
+}
+#foot h3{
+	font-size: 20px;
+}
+#foot p{
+	font-size: 14px;
+}
