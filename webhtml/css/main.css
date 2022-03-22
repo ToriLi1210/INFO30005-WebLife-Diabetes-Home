@@ -1,12 +1,19 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+	padding:0px;
 }
 
+body {
+	background-color: #ECF4EB;
+}
+
+
+
 #Top-header{
+	padding:21px;
 	color:#707070;
-	border-bottom-left-radius:80px;
-	border-bottom-right-radius:80px;
+	border-bottom-left-radius:80px 100px;
+	border-bottom-right-radius:80px 100px;
 	background-color:#CADECA
 }
 
@@ -25,18 +32,35 @@
 #Top-header h2 {
 	font-size: 20px;
 }
+=================
+.mid{
+}
 
-
-#middle p {
+.top {
 	font-size: 14px;
 }
-
-#foot h2 {
+.bottom h2{
+	font-size: 20px;
+	padding:20px;
+}
+.bottom h3{
 	font-size: 20px;
 }
-#foot h3{
-	font-size: 20px;
-}
-#foot p{
+.bottom p{
 	font-size: 14px;
+	text-align:center;
 }
+
+#ft a{
+	padding：-10px;
+}
+
+#foot {
+	background-color: #ABB1AB;
+	height:281px;
+	margin-right:-20px;
+	margin-left:-20px;
+	
+}
+
+	
