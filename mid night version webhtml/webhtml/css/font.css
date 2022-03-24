@@ -1,0 +1,48 @@
+#top-header header {
+	font-size: 8.5vw;
+    font-family: 'IBM Plex Sans', medium;
+    line-height: 11.2vw;
+}
+
+#top-header h1,h2{
+	font-family: 'IBM Plex Mono';
+	font-size: 25px;
+	font-weight: 400;
+}
+
+#top-header h2{
+	font-family: 'IBM Plex Mono';
+	font-size: 20px;
+	font-weight: 400;
+}
+
+
+
+/* about diabetes */
+
+#Top-header header{
+	font-size: 8.5vw;
+    font-family: 'IBM Plex Sans', medium;
+    line-height: 11.2vw;
+}
+
+
+
+
+p{
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 3.7vw;
+ line-height: 5.3vw;
+ letter-spacing: 0.3px;
+}
+
+
+.paratitle{
+    font-family: 'IBM Plex Mono',monospace;
+    font-size: 6.6vw;
+}
+
+.back{
+	font-family: 'IBM Plex Mono',monospace;
+	font-size: 15px;
+}

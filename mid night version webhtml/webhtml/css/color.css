@@ -1,0 +1,31 @@
+#top-header header,h2{
+	color: #707070;
+}
+#top-header h1{
+	color: #494949;
+}
+
+p{
+    color: #707070;
+}
+
+.paralink a{
+    color: #707070;
+}
+
+.social_media { 
+	color:#231F20;
+}
+
+.social_media a{ 
+	color:#231F20;
+}
+
+.back{
+	color:#707070;
+}
+
+/* about diabetes */
+#Top-header header{
+	color: #707070;
+}
