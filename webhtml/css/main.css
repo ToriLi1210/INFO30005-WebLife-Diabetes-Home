@@ -1,75 +1,73 @@
-*{
-    margin: 10px;
-	padding:0px;
+* {
+  margin: 10px;
+  padding: 0px;
 }
 
 body {
-	background-color: #ECF4EB;
+  background-color: #ecf4eb;
 }
 
-
-
-#Top-header{
-	padding:21px;
-	color:#707070;
-	border-bottom-left-radius:80px 100px;
-	border-bottom-right-radius:80px 100px;
-	background-color:#CADECA
+#Top-header {
+  padding: 21px;
+  color: #707070;
+  border-bottom-left-radius: 80px 100px;
+  border-bottom-right-radius: 80px 100px;
+  background-color: #cadeca;
 }
 
 #Top-header header {
-	font-size: 40px;
+  font-size: 40px;
 }
 
 #Top-header h1 {
-	font-size: 25px;
-	color:#494949;
+  font-size: 25px;
+  color: #494949;
 }
 
 #Top-header p {
-	font-size: 14px;
+  font-size: 14px;
 }
 #Top-header h2 {
-	font-size: 20px;
+  font-size: 20px;
 }
 
-.mid{
+.mid {
 }
 
 .top {
-	font-size: 14px;
+  font-size: 14px;
 }
-.bottom h2{
-	font-size: 20px;
-	padding:20px;
+.bottom h2 {
+  font-size: 20px;
+  padding: 20px;
 }
-.bottom h3{
-	font-size: 20px;
+.bottom h3 {
+  font-size: 20px;
 }
-.bottom p{
-	font-size: 14px;
-	text-align:center;
+.bottom p {
+  font-size: 14px;
+  text-align: center;
 }
 
-#ft a{
-	padding: -10px;
+#ft a {
+  padding: -10px;
 }
 
 #foot {
-	background-color: #ABB1AB;
-	height:400px;
-	margin-right:-20px;
-	margin-left:-20px;	
+  background-color: #abb1ab;
+  height: 400px;
+  margin-right: -20px;
+  margin-left: -20px;
 }
-#foot-left{
-	float: left;
-	text-align: left;
+#foot-left {
+  float: left;
+  text-align: left;
 }
-#foot-right{
-	float: right;
-	text-align: left;
+#foot-right {
+  float: right;
+  text-align: left;
 }
-#copyright{
-	clear: both;
-	text-align: center;
+#copyright {
+  clear: both;
+  text-align: center;
 }
