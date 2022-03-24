@@ -53,6 +53,7 @@ body {
   padding: -10px;
 }
 
+/* bottom find us */
 #foot {
   background-color: #abb1ab;
   height: 400px;
@@ -70,4 +71,63 @@ body {
 #copyright {
   clear: both;
   text-align: center;
+  background-color: #abb1ab;
+  height: 400px;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+#foot-left {
+  float: left;
+  text-align: left;
+}
+#foot-right {
+  float: right;
+  text-align: left;
+}
+
+#foot-left a {
+  font-size: 14px;
+  color: white;
+}
+
+#foot-right p {
+  font-size: 14px;
+  color: white;
+}
+#copyright {
+  clear: both;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+/* about diabetes css */
+.image {
+  width: 90%;
+}
+
+#type1 {
+  font-size: 18px;
+}
+#type2 {
+  font-size: 18px;
+}
+#Gestational-Diabetes {
+  font-size: 18px;
+}
+#top-middle {
+  line-height: 5px;
+  color: #707070;
+}
+
+#bottom-part header {
+  font-size: 32px;
+}
+
+.samll-title {
+  font-size: 18px;
+}
+
+#bottom-part h6 {
+  font-size: 18px;
 }
