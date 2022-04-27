@@ -1,0 +1,367 @@
+/* patient nav bar  css start */
+#patientnavbar {
+    font-size: 38.45px;
+    width: 100%;
+    display: flex;
+    background-color: #F8F8F8;
+    justify-content: center;
+    position: fixed;
+    left: 0px;
+}
+
+#patientnavbar li {
+    padding: 0px 60px;
+    position: center;
+    list-style: none;
+}
+#patientnavbar a{
+    text-align: center;
+    display:flex;
+    text-decoration: none;
+    color: #707070;
+}
+#patientnavbar li a i{
+    color: #C0D1CB;
+}
+
+
+
+
+/* iphone */
+@media only screen and (max-width: 1023px) {
+    .menu_text {
+        display: none;
+    }
+
+    #patientnavbar {
+        bottom: 0.5px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+    }
+
+    #desk_box{
+        display: none;
+    }
+    footer {
+        margin-right: -8.8vw;
+        margin-left: -8.8vw;
+        margin-bottom: 18vw;
+        padding-right: 13.6vw;
+        padding-left: 13.6vw;
+        padding-top: 17.0vw;
+        padding-bottom: 4.8vw;
+    }
+
+    footer #copyright{
+        padding-top: 9.8vw;
+    }
+}
+
+
+/* ipad */
+@media only screen and (min-width: 1024px) and (max-width: 1919px) {
+    .menu_text {
+        display: none;
+    }
+
+    #patientnavbar {
+        bottom: 0.5px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+    }
+
+    #patientnavbar li {
+        padding: 0px 100px;
+    }
+    
+    footer {
+        left:0;
+        right: 0;
+        font-size: 20px;
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    footer #links{
+        margin-left: 30px
+    }
+    footer #contact{
+        margin-right: 30px;
+    }
+    footer #copyright{
+        padding-top: 20px;
+    }
+}
+
+/* PC */
+@media only screen and (min-width: 1920px) {
+    #patientnavbar{
+        top:0px;
+        padding: 20px;
+    }
+    .menu_text{
+        margin-top: -5px;
+    }
+    footer {
+        left:0;
+        right: 0;
+        top: 1000px;
+        position: absolute;
+        margin:0px;
+        font-size: 36px;
+        padding-top: 90px;
+        padding-left: 90px;
+        padding-right: 90px;
+        padding-bottom: 20px;
+    }
+    #links{
+        margin-left: 150px;
+    }
+    #contact{
+        margin-right: 150px;
+    } 
+    footer #copyright{
+        clear: both;
+        text-align: center;
+        padding-top: 100px;
+    }
+}
+
+
+/* patient nav bar css end */
+
+/* back button css start*/
+.back_to_home a {
+    text-decoration: none;
+    color: #B93032;
+    font-size: 4vw;
+}
+
+/* back button css end*/
+
+/* footer css start*/
+footer {
+    background-color: #ABB1AB;
+}
+
+footer #links {
+    float: left;
+    text-align: left;
+    color: white;
+}
+
+#links a {
+    text-decoration: none;
+    color: white;
+}
+
+#contact a {
+    text-decoration: none;
+    color: #484745;
+}
+
+footer #contact {
+    float: right;
+    text-align: left;
+    color: white;
+}
+
+footer #contact .social_media {
+    margin-top: 3vw;
+    color: white;
+}
+
+footer #copyright {
+    clear: both;
+    text-align: center;
+    color: white;
+}
+
+
+/* add record css start*/
+#view_input_box {
+    margin-top: 281px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: whitesmoke;
+}
+
+p.recorded_data{
+    border-bottom: 0.3vw #707070 solid;
+    width: 100%;
+    font-size: 16px;
+    color:#707070;
+}
+
+#input_box {
+    position: fixed;
+    display: none;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    /* background-color: rgb(155, 155, 155); */
+
+    background-color:rgb(155, 155, 155);
+
+    /* background-color: red; */
+    z-index: 2;
+    cursor: pointer;
+
+    /* padding-top: 281px; */
+    /* margin-top: 281px; */
+    /* padding-right: 20px; */
+    border: 0.26667vw black solid;
+    border-radius: 2.66667vw;
+    position: fixed;
+    /* display: none; */
+    /* background-color: #F8F8F8;; */
+    /* background-color: red; */
+}
+
+.input_1 {
+    /* padding: 200px; */
+    /* padding-top: 281px; */
+    display: flex;
+    /* width: 80vw; */
+    padding: 7vw;
+
+}
+
+
+input {
+    outline-style: none;
+    border: 0vw;
+    border-bottom: 0.26667vw solid #707070;
+    width: 75vw;
+    text-align: left;
+    background-color: #F8F8F8;
+    font-size: 26px;
+    
+
+}
+
+input::placeholder {
+    font-size: 4.26667;
+    font-family: 'IBM Plex Mono', serif;
+    color: #707070;
+    margin-bottom: 0.26667vw;
+}
+
+.unit {
+    font-size: 4.26667vw;
+    font-family: 'IBM Plex Mono', serif;
+    color: #707070;
+    border-bottom: 0.3vw solid #707070;
+    padding-bottom: 0.53333vw;
+    text-align: right;
+}
+
+
+#task_record {
+    margin-top: 2vw;
+    padding-top: 6.67vw;
+    padding-bottom: 6.67vw;
+    border-radius: 15px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #B93032;
+    background-color: inherit;
+    font-size: 5.06vw;
+    text-align: center;
+    font-weight: 500;
+    line-height: 4vw;
+    width: 100%;
+}
+
+.phone_record_button {
+    display :flex;
+    justify-content:space-between;
+    padding: 5px 20px;
+}
+.return, .record_upload, .comment_upload,.i_record_upload { 
+    /* width: 100px; */
+    padding:9px 25px;
+    border-radius: 25px;
+}
+.ipad_record_button{
+    text-align: right;
+}
+.comment_button {
+    text-align: right;
+}
+
+
+.save button {
+    border-radius: 5.33333vw;
+    width: 29vw;
+    height: 9.6vw;
+    margin-left: 220px;
+    display: inline-block;
+}
+
+.back_button {
+    border-radius: 5.33333vw;
+    width: 29vw;
+    height: 9.6vw;
+    margin-right: 375px;
+    padding: 5px;
+    
+}
+
+/* add record css end*/
+
+/* add comment css start*/
+/* Comment */
+.comment_record {
+    border-radius: 3.46667vw;
+    width: 87.2vw;
+    border: 0.26667vw #707070 solid;
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 100%;
+}
+
+.commentArea {
+    padding-top: 10px;
+    background-color: #F8F8F8;
+    padding-left: 3.7vw;
+    padding-right: 3.7vw;
+    border-radius: 3.46667vw;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(transparent, transparent calc(4ch - 1px), #707070 1px);
+    background-size: 100% 4ch;
+    line-height:32px;
+    height:185px;
+}
+
+
+
+.commentArea::placeholder {
+    font-size: 14px;
+    text-indent: 1vw;
+}
+
+
+textarea::placeholder {
+    color: #B93032;
+}
+
+.history_comment {
+    text-align: right;
+}
+
+#bloodsugar_more_comment {
+    padding-top: 1.06667vw;
+    color: #B93032;
+    border: none;
+    background-color: inherit;
+}
+
+/* add comment css close*/

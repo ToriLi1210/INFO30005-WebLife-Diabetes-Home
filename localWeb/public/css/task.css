@@ -1,0 +1,456 @@
+.task_margin{
+    margin-left: 6.4vw;
+    margin-right: 6.4vw;
+    margin-top: 3.2vw;
+}
+#line_graph{
+    height:58.13333vw;
+    width:85vw;
+}
+
+.task_tips{
+    margin-top: 3vw;
+    padding: 5.33333vw;
+    border: 0.26667vw #707070 solid;
+    border-radius:5.33333vw 5.33333vw;
+    margin-bottom: 40vw;
+}
+#input_box{
+    background-color: rgba(118, 125, 125, 0.4);
+}
+.input_1{
+    opacity: 1;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+/* .input_1{
+    display: none;
+} */
+/* #view_input_box{
+    display: none;
+} */
+
+
+@media only screen and (max-width: 1023px){
+
+#desk_input_box{
+    display: none;
+}
+input {
+    font-size: 15px;
+}
+
+}
+/* patient_task_page_css_close*/
+
+
+/* ipad version */
+/* (min-width: 1024px)  */
+@media only screen and (min-width: 1024px) and (max-width: 1919px) {
+    /* patient - phone -size margin*/
+    .task_margin{
+        /* margin: 0%; */
+        margin: 0 0 50px 0;
+        /* padding-top: 65px; */
+        padding-left: 54px;
+        padding-right: 81px;
+        padding-bottom: 27px;
+    }
+    .task_margin{
+        display: grid;
+        grid-template-columns: 458px 431px;
+        grid-template-rows:361px 315px;
+        grid-template-areas: 
+        "topleft topright"
+        "bottomleft bottomright";
+
+    }
+    .back_to_home{
+        grid-area: topleft;
+        padding-bottom: 0px;
+    }
+    .back_to_home a{
+        font-size: 24px;
+    }
+
+
+    .history{
+        grid-area: topleft;
+        margin-top: 60px;
+        margin-left: 10px;
+        
+    }
+    #line_graph{
+        height:265px;
+        width:440px;
+
+    }
+
+
+    .t_record{
+        display:none;
+    }
+
+
+    /* .desk_box{
+        grid-area:topright;
+        width:320px;
+        height:auto;
+        align-self: end;
+        border: 1px #707070 solid;
+        padding-left: 60px;
+    } */
+
+    #desk_input_box{
+        grid-area:topright;
+        /* width:320px;
+        height:auto; */
+        align-self: end;
+        border: 2px #707070 solid;
+        border-radius: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-left:55px;
+        margin-bottom: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 135px;
+        /* width:320px;
+        height:auto; */
+        
+    }
+    .comment_upload{
+        margin: 0px 29px;
+        padding: 10px 30px;
+
+    }
+    input{
+        width: 400px;
+    }
+
+    .input_1{
+        grid-area:topright;
+        width:300px;
+        padding: 10px;
+        /* font-size: 30px; */
+    }
+
+    .input_1 input{
+        font-size:15px;
+        color: #707070;
+        font-family: 'IBM Plex Mono';
+    }
+
+    p.unit{
+        font-size:15px;
+    }
+    p.recorded_data{
+    font-size:15px;
+    color:#707070;
+    }
+    .save_button button{
+        font-size:14px;
+        width:100px;
+        height:40px;
+        border-radius: 20px;
+    }
+    .save button{
+        text-align: right;
+        padding-left: 20px;
+        padding-right: 20px;
+        /* margin-left: 400px; */
+    }
+
+
+    .comment_record{
+        width:auto;
+        height: auto;
+    }
+
+    #task_record{
+        display: none;
+        /* font-family:'IBM Plex Sans', sans-serif;
+        color:#B93032;
+        background-color: inherit;
+        font-size:5.06vw;
+        font-weight:500;
+        line-height: 4vw; */
+    }
+    
+    .task_tips{
+        grid-area: bottomleft;
+        height: 196px;
+        width:auto;
+        margin-top: 25px;
+        padding: 20px 15px 20px 15px;
+        border-radius:20px;
+        margin: 27px 10px 10px 10px;
+    }
+    .summary{
+        font-size: 17px;
+    }
+    .content{
+        margin: 0;
+        font-size: 16px;
+        padding: 10px 0px;
+    }
+    .t_comment h3{
+        font-size: 20px;
+        text-align: right;
+        color:#B93032 ;
+        margin-right: 14px
+        ;
+    } 
+    .comment_record{
+        height: 255px;
+        width: auto;
+        padding: 0;
+        margin-left: 57px ;
+        border-radius: 20px;
+    }
+    .commentArea{
+        padding:10px 20px 0px;;
+        outline:none;
+        background-image: linear-gradient(transparent, transparent calc(4ch - 1px), #707070 1px);
+        background-size: 100% 4ch;
+        line-height:32px;
+        height:180px;
+    }
+    .commentArea::placeholder{
+        font-size: 16px;
+    }
+    .save{
+        width: auto;
+        height: auto;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        font-size: 16px;
+        margin-left: 300px;
+        border-radius:25px;
+    }
+
+    #submit{
+        margin-left: 262px;
+        width: 75px;
+    }
+    .save_button{
+        /* text-align: right; */
+        padding-right:10px;
+        padding-bottom: 0;
+    }
+    .history_comment{
+        font-size: 20px;
+    }
+    #bloodsugar_more_comment{
+        padding:0;
+        margin: 0px;
+        font-size: 20px;
+    }
+
+    
+/* .task_tips{
+    margin-top: 3vw;
+    padding: 5.33333vw;
+    border: 0.26667vw #707070 solid;
+    border-radius:5.33333vw 5.33333vw;
+    margin-bottom: 40vw;
+} */
+    .t_comment{
+        grid-area: bottomright;
+    }
+
+}
+
+
+
+
+/* desktop version blood sugar page */
+@media only screen and (min-width: 1920px){
+    /* patient - phone -size margin*/
+    .task_margin {
+        padding: 0px;
+        margin-top: 118px;
+        margin-left: 200px;
+        margin-right: 200px;
+        display: grid;
+        grid-template-columns: 738px 678px;
+        grid-template-rows: 462px 368px;
+        grid-template-areas:
+            "topleft topright"
+            "bottomleft bottomright";
+    }
+
+
+    .back_to_home a{
+        display:none;
+    }
+
+    .history{
+        grid-area: topleft;
+        margin:0px;
+    }
+    
+    #line_graph{
+        grid-area: topleft;
+        width:570px;
+        height:360px;
+    }
+    .t_record{
+        display: none;
+    } 
+    /* #task_record{
+        display: none; */
+        /* font-family:'IBM Plex Sans', sans-serif;
+        color:#B93032;
+        background-color: inherit;
+        font-size:5.06vw;
+        font-weight:500;
+        line-height: 4vw; */
+    /* #desk_input_box{
+        display:none;
+        grid-area:topright;
+        color: red;
+        
+    } */
+    #desk_input_box{
+        grid-area:topright;
+        align-self: end;
+        border: 0.26667vw #707070 solid;
+        border-radius: 20px;
+        padding:25px;
+        margin-right: 30px;
+        margin-top:110px;
+        padding-bottom: 30px;
+    }
+    .i_record_upload, .comment_upload{
+        font-size: 25px;
+    }
+    .comment_upload{
+        margin-right: 30px;
+        padding: 10px 40px;
+    }
+    .input_1{
+        grid-area:topright;
+        /* width:auto; */
+        padding: 10px;
+        /* margin-right: 50px; */
+        width:500px;
+    }
+    /* #test input,#date input ,#time input{
+        margin-right: 30px;
+    } */
+
+    .input_1 input::placeholder, .unit{
+        font-size:25px;
+        width: 500px;
+        color:#707070
+    }
+    .recorded_data{
+        font-size: 40px;
+    }
+
+    p.recorded_data{
+        font-size:25px;
+        color:#707070;
+    }
+
+    .task_tips{
+        grid-area: bottomleft;
+        padding: 20px 15px 20px 15px;
+        margin-top: 33px;
+        margin-right: 169px;
+        margin-bottom: 0px;
+        border-radius: 20px;
+        
+    }
+    /* .summary{
+        font-size: 23px;
+    } */
+    /* .content{
+        margin: 0px;
+        font-size: 22px;
+        padding: 0px;
+    } */
+    .t_comment{
+        grid-area:bottomright;
+        margin-right: 30px;
+        border-radius: 20px;
+    }
+    .t_comment h3{
+        font-size:29px ;
+        margin: 0px;
+        text-align: right;
+        color: #B93032;
+    }
+    .comment_record{
+        height: 380px;
+        width: auto;
+        border-radius: 20px;
+    }
+    .commentArea::placeholder{
+        font-size: 26px;
+    }
+    
+    
+    
+    /* 有问题 */
+    .commentArea{
+        border-bottom:0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+        padding-bottom:0px;
+        border-radius: 20px;
+        font-size: 24px;
+        outline:none;
+        background-image: linear-gradient(transparent, transparent calc(4ch - 1px), #707070 1px);
+        background-size: 100% 4ch;
+        line-height:58px;
+        height:250px;
+    }
+
+    button.save{
+        position: relative;
+        float: right;
+        border-radius: 30px;
+    }
+    .save_button {
+        text-align: right;
+        /* margin-right:40px; */
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        /* margin: 0px; */
+        margin-top: 30px;
+        /* font-size: 16px; */
+
+    }
+    #submit{
+        font-size: 26px;
+        padding: 5px;
+        border-radius: 25px;
+    }
+    .save {
+        width:auto;
+        height:auto;
+        padding: 10px;
+        font-size: 26px;
+        margin-right: 22px;
+    }
+    
+    .history_comment{
+        font-size: 26px;
+    }
+    
+    #bloodsugar_more_comment{
+        padding:0px;
+        /* margin: 0px; */
+        margin-top: 5px;
+        font-size: 30px;
+        /* 有问题 */
+        margin: 0px;
+    }
+}
