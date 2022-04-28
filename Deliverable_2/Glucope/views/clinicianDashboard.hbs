@@ -1,0 +1,78 @@
+<div class="clinician_margin">
+    {{!-- sidenav section --}}
+    {{#each clinicianData}}
+    {{> sideNav }}
+    {{/each}}
+
+    {{!-- patient list section --}}
+    <div id="patientlist">
+        <div class="region">
+            <div id="patientTitle">
+                <p class="listTitle">Patient List</p>
+                {{> searchbar}}
+            </div>
+            <div class="wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name<i class="fa fa-fw fa-sort"></i></th>
+                            <th>Glucose</br>(nmol/L)<i class="fa fa-fw fa-sort"></i></th>
+                            <th>Exercise</br>(Steps)<i class="fa fa-fw fa-sort"></i></th>
+                            <th>Insulin</br>(Doses)<i class="fa fa-fw fa-sort"></i></th>
+                            <th>Weight</br>(kg)<i class="fa fa-fw fa-sort"></i></th>
+                        </tr>
+                    </thead>
+                    {{!-- import new data uploaded by customer from database --}}
+                    <tbody>
+                        {{#each recordsData}}
+                        <tr>
+                            <td>{{this.firstName}} {{this.lastName}}</td>
+                            {{#withinRange this.needToDo.bloodSugar.status this.needToDo.bloodSugar.min
+                            this.needToDo.bloodSugar.max this.bloodSugar.value}}
+                            <td>{{this.bloodSugar.value}}</td>
+                            {{else}}
+                            <td>
+                                <font color="red">{{this.bloodSugar.value}}</font>
+                            </td>
+                            {{/withinRange}}
+                            <td>{{this.exercise.value}}</td>
+                            <td>{{this.insulin.value}}</td>
+                            <td>{{this.weight.value}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    {{!-- import new comment uploaded by customer from database --}}
+    <div id="newcomment">
+        <div class="region">
+            <div id="commentTitle">
+                <p class="listTitle">Comment</p>
+                <div>{{>searchbar}}</div>
+            </div>
+
+            <div class="wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time<i class="fa fa-fw fa-sort"></i></th>
+                            <th>Detail<i class="fa fa-fw fa-sort"></i></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{#each recordsComent}}
+                        <tr>
+                            <td>{{this.time}}</td>
+                            <td>{{this.comment}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
