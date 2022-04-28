@@ -1,0 +1,33 @@
+{{!-- comment section --}}
+<form action="" method="POST">
+    <div class="comment_record">
+
+        {{#ifUnrecorded bloodSugar.comState}}
+        <textarea maxlength="140" class="commentArea" name="comment"
+            placeholder="Enter Comments for Last Record Only After Entered Record." cols="36" rows="8"
+            required></textarea>
+        {{else}}
+        <p class="commentArea" name="comment" cols="36" rows="4">
+            {{bloodSugar.comment}}</p>
+        </textarea>
+        {{/ifUnrecorded}}
+
+        <div class="comment_button">
+            {{#ifUnrecorded bloodSugar.comState}}
+            <button class="comment_upload" type="submit">Save</button>
+            {{else}}
+            <button class="comment_upload">Saved</button>
+            {{/ifUnrecorded}}
+        </div>
+
+    </div>
+</form>
+
+{{!-- go to history comment --}}
+<div class="history_comment">
+    <a href="/notfinished">
+        <button class="record" id="bloodsugar_more_comment">
+            See more<i class="fa-solid fa-angle-right">&nbsp;</i>
+        </button>
+    </a>
+</div>
