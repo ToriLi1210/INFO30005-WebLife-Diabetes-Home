@@ -1,8 +1,4 @@
-readme.html
-
-Readme_please 求你了_dekko看一眼
-
-Read me for Deliverable 2!!!!!!!!!!!!!!!!!!!!!!!!
+Read me for Deliverable 2
 
 patient link: directed to Patient Pat Dashboard Page
 
