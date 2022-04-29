@@ -1,0 +1,42 @@
+{{!-- record section --}}
+<div id="input_box">
+    <form action="" method="post">
+        <div id="view_input_box">
+            <div class="input_1">
+                {{#ifUnrecorded bloodSugar.status}}
+                <input id="test" type="text" name="measurement" placeholder="Measurement :" required>
+                {{else}}
+                <p class="recorded_data">{{bloodSugar.value}}</p>
+                {{/ifUnrecorded}}
+                <p class="unit">mmol/L</p>
+            </div>
+            <div class="input_1">
+                {{#ifUnrecorded bloodSugar.status}}
+                <input name="date" placeholder="Date:" class="inputDate" type="text" onfocus="(this.type='date')"
+                    id="date" required>
+                {{else}}
+                <p class="recorded_data">{{recordDate}}</p>
+                {{/ifUnrecorded}}
+                <p class="unit">&ensp;&ensp;&ensp;&ensp;</p>
+            </div>
+            <div class="input_1">
+                {{#ifUnrecorded bloodSugar.status}}
+                <input name="time" placeholder="Time:" class="inputTime" type="text" onfocus="(this.type='time')"
+                    id="time" required>
+                {{else}}
+                <p class="recorded_data">{{bloodSugar.time}}</p>
+                {{/ifUnrecorded}}
+                <p class="unit">&ensp;&ensp;&ensp;&ensp;</p>
+            </div>
+
+            <div class="phone_record_button">
+                <button class="return" onclick="javascript:history.go(0);">Back</button>
+                {{#ifUnrecorded bloodSugar.status}}
+                <button class="record_upload" type="submit">Submit</button>
+                {{else}}
+                <button class="record_upload">Submitted</button>
+                {{/ifUnrecorded}}
+            </div>
+        </div>
+    </form>
+</div>
