@@ -1,0 +1,66 @@
+<div id="add_patient_page">
+    {{#each clinicianData}}
+    {{> sideNav }}
+    {{/each}}
+    {{!-- hello --}}
+    <div id="add_patient">
+        <h1>Create a new patient</h1>
+        <form action="" method="post" id="createFunction" onsubmit="return checksex()" name="myForms">
+            <section id="patient_detail">
+                <div class="detail_required">
+                    <div class="info_row">
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" onkeydown="return /[a-z]/i.test(event.key)" required>
+                    </div>
+                    <div class="info_row">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" onkeydown="return /[a-z]/i.test(event.key)" required>
+                    </div>
+                </div>
+                <div class="detail_required">
+                    <div class="info_row">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="info_row">
+                        <label for="password">Password</label>
+                        <input type="text" name="password" onkeydown="return /^[A-Za-z0-9_@./#&+-]*$/.test(event.key)"
+                            required>
+                    </div>
+                </div>
+                <div class="detail_required">
+                    <div class="info_row">
+                        <label for="year_of_birth">Year of Birth</label>
+                        <input type="number" min="1900" max="2022" step="1" name="year" placeholder="yyyy" required>
+
+                    </div>
+                    <div class="info_row">
+                        <label for="sex">Sex</label>
+                        <input type="text" name="patient_sex" placeholder="female/male" id="patient_sex"
+                            onkeydown="return /^[a-z]/./8/46/.test(event.key)" required>
+                    </div>
+                </div>
+                <div id="err_msg">{{message}}</div>
+                <div id="create_button">
+                    <button type="submit" onclick="notification()">Create</button>
+                </div>
+            </section>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    var form = document.getElementById('createFunction');
+
+    function notification() {
+        if (password.length >= 8) {
+            alert("Successfully Created!");
+        } else {
+            alert("Please make sure passward at least 8 character.");
+        }
+
+    }
+
+
+</script>

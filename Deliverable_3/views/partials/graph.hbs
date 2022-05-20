@@ -1,0 +1,40 @@
+
+<canvas id="myChart" style="none" ></canvas>
+
+<script>
+var xValues = {{{date}}};
+var yValues = {{{data}}};
+var graphType = {{{graphType}}};
+var colour = {{{colour}}};
+var options = {
+    // 'Raleway' is the name of the fond I imported from GoogleFonts
+    defaultFontFamily: Chart.defaults.global.defaultFontFamily = "'IBM Plex Mono'"
+}
+
+new Chart("myChart", {
+  type: graphType,
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill:false,
+      data: yValues,
+      borderRadius: 100,
+      borderColor: colour,
+      backgroundColor: colour,
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{
+          display: true,
+          //ticks: {min: 2, max:4},
+          position: 'right',
+      }],
+      xAxes: [{
+          display:true
+      }],
+    }
+  }
+});
+</script>

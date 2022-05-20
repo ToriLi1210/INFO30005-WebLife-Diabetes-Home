@@ -1,0 +1,287 @@
+ .motivation_page a {
+   color: black;
+   /* background-color: #ECF4EB; */
+ }
+
+ .motivation_page {
+   margin: 0px 12px 0px 12px;
+ }
+
+ #badge_image {
+   height: 60px;
+ }
+
+ #top5_rank {
+   padding: 0px 20px 20px;
+   border: 2px solid rgb(97, 92, 92);
+   border-radius: 20px;
+   background-color: #F6f6f6;
+ }
+
+ #engagement {
+   display: flex;
+ }
+
+ #engagement p {
+   padding-top: 26px;
+ }
+
+ @font-face {
+   font-family: DaggerSquare;
+   src: url("fonts/podium-font.woff") format("woff"), url("fonts/podium-font.ttf") format("truetype");
+ }
+
+ #podium-box {
+   margin: 0 auto;
+   display: flex;
+ }
+
+ .podium-number {
+   font-family: DaggerSquare;
+   font-weight: bold;
+   font-size: 4em;
+   color: #F7F7F7;
+ }
+
+ #winner1 {
+   margin-top: 10px;
+   text-align: center;
+ }
+
+ #winner2 {
+   margin-top: 35px;
+   text-align: center;
+ }
+
+ #winner3 {
+   margin-top: 39px;
+   text-align: center;
+ }
+
+ .step-container {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+ }
+
+ /* .step-container>div:first-child {
+    margin-top: auto;
+    text-align: center;
+  } */
+ .rest {
+   padding: 10px 0px;
+   display: flex;
+   align-items: center;
+ }
+
+ .rest_name,
+ .me_name {
+   margin-left: 50px;
+   align-items: center;
+   font-size: 12px;
+ }
+
+ /* .me_name{
+    margin-left: 50px;
+    font-size: 12px;
+  } */
+ /* .podium-number1{
+    font-family: DaggerSquare;
+    color: white;
+  } */
+ #fourth_step,
+ #fifth_step,
+ #me_step {
+
+   /* border: 2px solid; */
+   padding: 8px 15px 8px 15px;
+   border-radius: 50%;
+   text-align: center;
+   background-color: #BFD5BB;
+ }
+
+ #fourth_step p,
+ #me_step p,
+ #fifth_step p {
+   padding-top: 2px;
+   font-size: 20px;
+   font-family: DaggerSquare;
+   color: white;
+ }
+
+ .current_position {
+   padding: 10px 0px;
+   display: flex;
+   padding-top: 10px;
+   border: 1px solid black;
+   border-radius: 15px;
+   background-color: #F2F5ED;
+   align-items: center;
+ }
+
+
+
+ .step {
+   text-align: center;
+ }
+
+ .bg-blue {
+   background-color: #BFD5BB;
+ }
+
+ #first-step {
+   height: 100%;
+   border-radius: 12px 12px 0px 0px;
+ }
+
+ #second-step {
+   height: 100%;
+   border-radius: 16px 0px 0px 16px;
+ }
+
+ #third-step {
+   height: 100%;
+   border-radius: 0px 16px 16px 0px;
+ }
+
+
+ /* ipad version */
+ @media only screen and (min-width: 1024px) and (max-width: 1919px) {
+   .back_to_home a {
+     margin-top: 20px;
+     display: flex;
+     align-items: center;
+     /* color: #707070; */
+   }
+
+   .motivation_page {
+     margin: 0px 24px;
+   }
+
+   .motivation {
+     margin-top: 60px;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 600px;
+     grid-template-areas: "ranking tree";
+     grid-gap: 14px;
+   }
+
+   .motivation h1 {
+     margin-bottom: 20px;
+   }
+
+   .ranking {
+     grid-area: ranking;
+     width: 380px;
+     margin: 0 auto;
+   }
+
+   .tree_board {
+     grid-area: tree;
+     height: 400px;
+     text-align: center;
+     margin-top: 70px;
+   }
+
+   .tree_board img {
+     height: inherit;
+   }
+ }
+
+ /* desktop version */
+ @media only screen and (min-width: 1920px) {
+   .back_to_home {
+     display: none;
+   }
+
+   .motivation_page {
+     margin: 0px 24px;
+   }
+
+   .motivation {
+     margin-top: 60px;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 800px;
+     grid-template-areas: "ranking tree";
+     grid-gap: 14px;
+   }
+
+   .motivation h1 {
+     margin-bottom: 20px;
+   }
+
+   .ranking {
+     grid-area: ranking;
+     width: auto;
+     margin: 0 auto;
+     justify-content: flex-start;
+   }
+
+   .tree_board {
+     grid-area: tree;
+     height: 400px;
+     text-align: center;
+     margin-top: 70px;
+   }
+
+   .tree_board img {
+     /* height:inherit; */
+     height: 800px;
+   }
+
+   #top5_rank {
+     width: 700px;
+     height: 750px;
+   }
+
+   #winner1 {
+     font-size: 32px;
+   }
+
+   #winner2 {
+     font-size: 32px;
+   }
+
+   #winner3 {
+     font-size: 32px;
+   }
+
+   #engagement p {
+     padding-top: 10px;
+     font-size: 32px;
+     margin-left: 20px;
+   }
+
+   .rest {
+     margin-top: 10px;
+   }
+
+   .current_position {
+     margin-top: 10px;
+   }
+
+   .rest p {
+     font-size: 32px;
+   }
+
+   .me_name {
+     font-size: 32px;
+   }
+
+   #fourth_step,
+   #fifth_step,
+   #me_step {
+     width: 30px;
+     height: 30px;
+     padding: 30px;
+     padding-top: 15px;
+   }
+
+   #fourth_step p,
+   #me_step p,
+   #fifth_step p {
+     font-size: 32px;
+   }
+ }

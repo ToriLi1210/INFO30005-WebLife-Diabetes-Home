@@ -1,0 +1,239 @@
+#background_image {
+    background: url("/image/background.svg")no-repeat center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main_section {
+    display: grid;
+    grid-template-columns: 1fr 33vw;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "title KV"
+        "blank advice";
+
+    padding: 180px 200px 80px 200px;
+}
+
+#login {
+    grid-area: title;
+
+}
+
+#info {
+    grid-area: advice;
+    margin-bottom: 200px;
+    justify-content: right;
+}
+
+#info_box {
+    text-align: right;
+}
+
+#info_box h2 {
+    font-size: 48px;
+    text-align: right;
+}
+
+#info p {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.tourimage {
+    grid-area: KV;
+}
+
+#KV {
+    text-align: right;
+    margin-top: 200px;
+}
+
+#KV img {
+    width: auto;
+}
+
+.login_required {
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+    margin-left: 45px;
+    padding: 20px 0px;
+}
+
+.login_required input {
+    margin: 20px 0 0 0;
+    border: 1px solid #707070;
+    border-radius: 15px;
+    width: 500px;
+    height: 60px;
+    text-indent: 20px;
+}
+
+.login_required input::placeholder {
+    font-size: 20px;
+}
+
+#login_button {
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 750px;
+}
+
+#login_button button {
+    padding: 20px 65px;
+    font-size: 25px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+#login_button button a {
+    text-decoration: none;
+    color: black;
+}
+
+.welcome_page button {
+    margin-top: 26px;
+    background-color: white;
+    border-radius: 36px;
+    padding: 7px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 2px 3px 3px #707070;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1919px) {
+    #background_image {
+        background: url("/image/background.svg")no-repeat center fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+    }
+
+    #main_section {
+        display: grid;
+        grid-template-columns: 1fr 500px;
+        grid-template-rows: 1fr 500px;
+        grid-template-areas: "title KV"
+            "blank advice";
+        padding: 100px 100px;
+    }
+
+    #login {
+        grid-area: title;
+
+    }
+
+    #KV {
+        justify-self: end;
+    }
+
+    #info {
+        grid-area: advice;
+        margin-bottom: 200px;
+        justify-content: right;
+    }
+
+    #info_box {
+        text-align: right;
+    }
+
+    #info_box h2 {
+        font-size: 32px;
+        text-align: right;
+        margin-top: 32px;
+    }
+
+    #info p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    #KV {
+        margin-top: 100px;
+        text-align: right;
+        width: 33vw;
+        /* margin-top: 200px; */
+    }
+
+
+    .login_required {
+        display: flex;
+        flex-direction: column;
+        font-size: 35px;
+        margin-left: 45px;
+        padding: 20px 0px;
+    }
+
+    .login_required input {
+        border: 1px solid #707070;
+        border-radius: 15px;
+        width: auto;
+        height: 60px;
+        text-indent: 20px;
+    }
+
+    .login_required input::placeholder {
+        font-size: 20px;
+    }
+
+    #login_button {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+
+    #login_button button {
+        padding: 20px 65px;
+        font-size: 25px;
+        border-radius: 50px;
+        background-color: white;
+    }
+
+    #login_button button a {
+        text-decoration: none;
+        color: black;
+    }
+
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 1022px) {
+    #main_section {
+        display: block;
+        padding: 60px 14px;
+        height: 600px;
+    }
+
+    #KV {
+        margin-top: 100px;
+        text-align: right;
+        float: right;
+        margin-bottom: 20px;
+        /* margin-top: 200px; */
+    }
+
+    #KV img {
+        height: 140px;
+
+    }
+
+
+    #info_box {
+        float: right;
+    }
+
+    #info_box h2 {
+        font-size: 18px;
+    }
+
+    #info_box p {
+        font-size: 10px;
+        line-height: 12px;
+        width: 230px;
+    }
+
+}

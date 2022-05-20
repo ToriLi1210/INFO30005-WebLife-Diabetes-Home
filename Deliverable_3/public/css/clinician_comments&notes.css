@@ -1,0 +1,20 @@
+.single_comment {
+    margin: 65px;
+    height: 680px;
+}
+
+.single_comment p {
+    font-size: 22px;
+    color: #707070;
+    line-height: 40px;
+}
+
+.single_title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.single_comment_content {
+    margin-bottom: 200px;
+}

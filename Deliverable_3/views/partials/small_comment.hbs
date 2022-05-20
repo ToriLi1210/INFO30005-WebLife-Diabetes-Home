@@ -1,0 +1,24 @@
+<div id = "patient_comment">
+    <p class = "small_title">Comment</p>
+    <div class="wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Day<i class="fa fa-fw fa-sort"></i></th>
+                                <th>Time<i class="fa fa-fw fa-sort"></i></th>
+                                <th>Detail<i class="fa fa-fw fa-sort"></i></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {{#each recordsComent}}
+                            <tr>
+                                <td>{{this.day}}</td>
+                                <td>{{this.time}}</td>
+                                <td>{{this.comment}}</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+</div>

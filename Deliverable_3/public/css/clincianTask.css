@@ -1,0 +1,34 @@
+/* comment zai zui you bian */
+.clinician_patient_margin1 {
+    display: grid;
+    grid-template-columns: 480px 698px 742px;
+    grid-template-rows: 1080px;
+    grid-template-areas:
+        "nav middle right";
+}
+
+aside {
+    grid-area: nav;
+}
+
+.task.detail {
+    grid-area: middle;
+}
+
+.comment_detail {
+    grid-area: right;
+}
+
+/* history zai zui hou bian  */
+.clinician_patient_margin2 {
+    display: grid;
+    grid-template-columns: 480px 698px 742px;
+    grid-template-rows: 1080px;
+    grid-template-areas:
+        "nav middle record_history";
+}
+
+.record_detail {
+    grid-area: record_history;
+    border: 1px solid #707070;
+}

@@ -1,0 +1,85 @@
+<div class = "history_margin">
+    <div class = "history_container">
+        <div class="back_to_home">
+            <a href="/patient/dashboard/{{task}}">
+                <i class="fa-solid fa-angle-left">&nbsp;</i><span>Back</span>
+            </a>
+        </div>
+        <div class="more_history">
+            <h1 class ="taskcolor">{{#getUpper task}} {{/getUpper}}</h1>
+            <div>{{> graph}}</div>
+        </div>
+    </div>
+
+        <div class = "tips_container">
+            <div class="task_tips" id ="history_tips">
+                <h3>Tips: </h3>
+                <p class="summary"><b>Eat more Nuts and Seeds</b></p>
+                <p class="content">
+                    A low intake of nuts and seeds was potentially
+                    linked to an increased risk of death
+                    from heart disease, stroke, or type
+                    2 diabetes.
+                </p>
+            </div>
+        </div>
+
+            {{!-- back to dashboard --}}
+        <div class = "comment_margin">
+            <div class="back_to_home" id = "no_show">
+                {{!-- href="/patient/dashboard" --}}
+                <a onclick="javascript:history.go(-1);">
+                    <i class="fa-solid fa-angle-left">&nbsp;</i><span>Back</span>
+                </a>
+            </div>
+
+            <div class="comment_history_patient {{task}}" >
+                <div class="title_position">
+                    <p class="title_history taskcolor" >Record History</p>
+                </div>
+
+                {{!-- <div class = "sort">
+                    <button>MM/YYYY</button>
+                </div> --}}
+
+                <div class="patient_history_box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date<i class="fa fa-fw fa-sort"></i></th>
+                                <th>Time<i class="fa fa-fw fa-sort"></i></th>
+                                <th>Value<i class="fa fa-fw fa-sort"></i></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {{#each allRecords}}
+                            <tr>
+                                {{#each this}}
+                                <td>{{date}} {{time}} {{value}}</td>
+                                {{/each}}
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+</div>
+    {{> nav}}
+
+
+<script>
+var colour = {{{colour}}}
+
+function changeStyle(){
+    const changelist = document.getElementsByClassName('taskcolor');
+     for(var i = changelist.length - 1; i >= 0; --i){
+        changelist[i].style.color=colour;
+     }
+}
+
+window.onload = function(){
+    changeStyle();
+}
+</script>

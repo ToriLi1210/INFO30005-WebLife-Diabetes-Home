@@ -1,0 +1,27 @@
+<div class = "note_detail">
+        <div class="region">
+            <div class="listTitle">
+                Notes
+            </div>
+
+            <div class="wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time<i class="fa fa-fw fa-sort"></i></th>
+                            <th>Detail<i class="fa fa-fw fa-sort"></i></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{#each notes}}
+                        <tr>
+                            <td>{{this.time}}</td>
+                            <td>{{this.note}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

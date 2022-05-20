@@ -1,0 +1,470 @@
+/* dealing with partial in different screen size */
+/* patient nav bar  css start */
+
+canvas {
+    width: 100%;
+    height: 200px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#patientnavbar {
+    font-size: 38.45px;
+    width: 100%;
+    display: flex;
+    background-color: #F8F8F8;
+    justify-content: center;
+    position: fixed;
+    left: 0px;
+    height: auto;
+}
+
+#patientnavbar li {
+    padding: 0px 60px;
+    position: center;
+    list-style: none;
+}
+
+#patientnavbar a {
+    text-align: center;
+    display: flex;
+    text-decoration: none;
+    color: #707070;
+}
+
+#patientnavbar li a i {
+    color: #C0D1CB;
+}
+
+
+/* patient nav bar css end */
+
+/* back button css start*/
+.back_to_home a {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* .bloodSugar {
+    color: #B93032;
+}
+.exercise {
+    color: #D97306;
+}
+.weight {
+    color: #5BB580;
+}
+.insulin {
+    color: #4A9DC1;
+} */
+
+/* back button css end*/
+
+/* footer css start*/
+footer {
+    background-color: #ABB1AB;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "links contact"
+        "copyright blank";
+
+}
+
+footer #links {
+    /* float: left;
+    text-align: left;*/
+    color: white;
+    grid-area: links;
+    padding-left: 6vw;
+}
+
+#links a {
+    text-decoration: none;
+    color: white;
+}
+
+#contact a {
+    text-decoration: none;
+    color: #484745;
+}
+
+footer #contact {
+    /* float: right;
+    text-align: left;*/
+    color: white;
+    grid-area: contact;
+    padding-right: 6vw;
+    text-align: right;
+}
+
+footer #contact .social_media {
+    margin-top: 11.25px;
+    color: white;
+}
+
+footer #copyright {
+    /* clear: both; */
+    text-align: center;
+    color: white;
+    grid-area: copyright;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-self: top;
+}
+
+
+/* add record css start*/
+#view_input_box {
+    margin-top: 281px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: whitesmoke;
+}
+
+p.recorded_data {
+    border-bottom: 1px #707070 solid;
+    width: 100%;
+    font-size: 16px;
+    color: #707070;
+}
+
+#input_box {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgb(155, 155, 155);
+    z-index: 2;
+    cursor: pointer;
+    border: 2px black solid;
+    border-radius: 10px;
+    position: fixed;
+}
+
+.input_1 {
+    display: flex;
+    padding: 26.25px;
+}
+
+
+input {
+    outline-style: none;
+    border: 0px;
+    border-bottom: 1px solid #707070;
+    width: 281.25px;
+    text-align: left;
+    background-color: #F8F8F8;
+    font-size: 26px;
+
+
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', serif;
+    color: #707070;
+    margin-bottom: 1px;
+}
+
+.unit {
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', serif;
+    color: #707070;
+    border-bottom: 1.125px solid #707070;
+    padding-bottom: 2px;
+    text-align: right;
+}
+
+
+#task_record {
+    margin: 7.5px 0px 15px;
+    padding-top: 25.0125px;
+    padding-bottom: 25.0125px;
+    border-radius: 15px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: inherit;
+    font-size: 18.9725px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 15px;
+    width: 100%;
+    border: 2px #707070 solid;
+    box-shadow: 3px 3px 3px #707070;
+    cursor: wait;
+}
+
+.phone_record_button {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+.return,
+.record_upload,
+.comment_upload,
+.i_record_upload {
+    padding: 9px 25px;
+    border-radius: 25px;
+    font-family: 'IBM Plex Mono', sans-serif;
+}
+
+.ipad_record_button {
+    text-align: right;
+}
+
+.comment_button {
+    text-align: right;
+}
+
+
+.save button {
+    border-radius: 20px;
+    width: 108px;
+    height: 36px;
+    margin-left: 220px;
+    display: inline-block;
+}
+
+.back_button {
+    border-radius: 20px;
+    width: 108px;
+    height: 36px;
+    margin-right: 375px;
+    padding: 5px;
+
+}
+
+/* add record css end*/
+
+/* add comment css start*/
+/* Comment */
+.comment_record {
+    border-radius: 13px;
+    width: 327px;
+    border: 2px #707070 solid;
+    box-shadow: 3px 3px 3px #707070;
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.commentArea {
+    padding-top: 10px;
+    background-color: #F8F8F8;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 13px;
+    border: none;
+    outline: none;
+    /* background-image: linear-gradient(transparent, transparent calc(4ch- 1px), #707070 1px); */
+    background-image: linear-gradient(transparent, transparent calc(4ch - 1px), #707070 1px);
+    background-size: 100% 4ch;
+    line-height: 36px;
+    height: 185px;
+    font-size: 15px;
+    font-family: 'IBM Plex Mono', monospace;
+    text-indent: none;
+}
+
+.commentArea::placeholder {
+    font-size: 14px;
+    text-indent: 3.75px;
+}
+
+.bloodSugar textarea::placeholder {
+    color: #B93032;
+}
+
+.exercise textarea::placeholder {
+    color: #D97306;
+}
+
+.weight textarea::placeholder {
+    color: #5BB580;
+}
+
+.insulin textarea::placeholder {
+    color: #4A9DC1;
+}
+
+
+.history_comment {
+    text-align: right;
+}
+
+#more_comment {
+    padding-top: 4px;
+    border: none;
+    background-color: inherit;
+}
+
+/* add comment css close*/
+/* iphone */
+@media only screen and (max-width: 1023px) {
+    .menu_text {
+        display: none;
+    }
+
+    #patientnavbar {
+        bottom: 15px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+    }
+
+    /* do not display input record box directly in phone , should sure after you click record  */
+    #desk_box {
+        display: none;
+    }
+
+    footer {
+        /* margin-right: -33px;
+        margin-left: -33px;
+        margin-bottom: 67.5px;
+        padding-right: 51px;
+        padding-left: 51px;
+        padding-top: 63.75px;
+        padding-bottom: 18px; */
+
+
+
+        /* margin-right: -33px; */
+        /* margin-left: -33px; */
+        /* margin-bottom: 67.5px; */
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 63.75px;
+        padding-bottom: 18px;
+    }
+
+    footer #copyright {
+        padding-top: 36.75px;
+    }
+}
+
+
+/* ipad */
+@media only screen and (min-width: 1024px) and (max-width: 1919px) {
+
+    /* do not display full nav name in ipad size */
+    .menu_text {
+        display: none;
+    }
+
+    #patientnavbar {
+        bottom: 10px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+    }
+
+    #patientnavbar li {
+        padding: 0px 100px;
+    }
+
+    footer {
+        left: 0;
+        right: 0;
+        font-size: 20px;
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    footer #links {
+        margin-left: 30px
+    }
+
+    footer #contact {
+        margin-right: 30px;
+    }
+
+    footer #copyright {
+        padding-top: 20px;
+    }
+}
+
+/* PC */
+@media only screen and (min-width: 1920px) {
+    #patientnavbar {
+        top: 0px;
+        padding: 20px;
+    }
+
+    .menu_text {
+        margin-top: -5px;
+    }
+
+    /* footer {
+        left: 0;
+        right: 0;
+        /* top: 1300px; */
+    /* position: absolute; */
+    /* margin: 0px;
+        font-size: 36px;
+        margin-top: 180px; */
+    /* padding-top: 90px; */
+    /* padding-left: 90px;
+        padding-right: 90px;
+        padding-bottom: 20px; */
+    /* } */
+
+    footer {
+        padding: 120px 280px;
+        background-color: #ABB1AB;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 100px;
+        grid-template-areas:
+            "links contact"
+            "copyright blank";
+    }
+
+    footer p {
+        font-size: 32px;
+    }
+
+    #links {
+        /* margin-left: 150px; */
+    }
+
+    #contact {
+        /* margin-right: 150px; */
+    }
+
+    footer #copyright {
+        clear: both;
+        text-align: center;
+    }
+
+
+}
+
+*/ .bloodSugarGraph {
+    height: 200px;
+    width: 300px;
+}
+
+/* 
+<style>@media (prefers-color-scheme: dark) {
+        body { 
+            background-color: black;        
+            color:white;    
+        }
+    }
+@media (prefers-color-scheme: light) {    
+        body {
+            background-color: white;
+            color:black;    
+        }
+    }
+</style>
+// html<body>  测试 prefers-color-scheme 属性</body> */

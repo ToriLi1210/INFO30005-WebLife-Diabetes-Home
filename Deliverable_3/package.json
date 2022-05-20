@@ -1,0 +1,29 @@
+{
+  "name": "glucope",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "prettier": "prettier --single-quote --no-semi --tab-width 4 --write **/*.js *.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.3",
+    "express-flash": "^0.0.2",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.3",
+    "location": "^0.0.1",
+    "mongoose": "^6.3.0",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "prettier": "^2.6.2"
+  }
+}

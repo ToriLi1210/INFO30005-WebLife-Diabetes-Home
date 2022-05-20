@@ -1,0 +1,14 @@
+<div class="clinician_patient_margin">
+    {{!-- sidenav section --}}
+    {{#each clinicianData}}
+    {{> sideNav }}
+    {{/each}}
+
+
+    {{!-- Middle Patient View --}}
+    {{> clinician_patient_dashboard}}
+
+
+    {{!-- Right Comment --}}
+    {{> clinician_patient_comment}}
+</div>

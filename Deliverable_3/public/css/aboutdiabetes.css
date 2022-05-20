@@ -1,0 +1,295 @@
+.background {
+    background-color: #cadeca63;
+    overflow: hidden;
+}
+
+.about_us_margin {
+    margin: 10px;
+}
+
+.about_margin {
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 12px;
+}
+
+.background p {
+    font-weight: 300;
+    margin: 0 12px;
+}
+
+#about_us_bg h1,
+#middle_title h1 {
+    margin: 32px 12px;
+    font-size: 32px;
+}
+
+#about_us_bg h2 {
+    margin: 10px 12px;
+    font-size: 18px;
+}
+
+#video {
+    width: 80%;
+    margin: 16px 0px;
+}
+
+#video iframe {
+    border-radius: 18px;
+    width: inherit;
+
+}
+
+#middle h3 {
+    font-weight: 600;
+    margin: 10px 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#bottom h2 {
+    margin: 10px 12px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.name_list {
+    display: flex;
+    font-size: 9px;
+    text-align: center;
+    margin: 0 12px;
+    justify-content: center;
+}
+
+.name_list img {
+    width: 48px;
+}
+
+.dekko {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.dekko img {
+    width: 60px;
+}
+
+#login_exp {
+    text-align: center;
+}
+
+.diabeteimg {
+    text-align: center;
+}
+
+#diabeteimg {
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+
+#video {
+    margin: 2.6vw;
+    width: 80%;
+    text-align: center;
+}
+
+#inside_link p {
+    text-align: left;
+    margin-left: 50px;
+}
+
+#about_tips {
+    background-color: #f8f8f8;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    padding: 2px;
+    margin: 28px 0 30px 0;
+    box-shadow: 3px 3px 3px #707070;
+}
+
+#about_tips h2 {
+    padding: 8px;
+}
+
+#about_tips p {
+    padding: 4px 8px 4px 12px;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+#login_exp a {
+    font-size: 20px;
+
+}
+
+.background footer {
+    margin-bottom: 0px;
+}
+
+p.small_title {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.diabeteimg1 {
+    text-align: center;
+}
+
+.diabeteimg2 {
+    text-align: center;
+}
+
+.diabeteimg3 {
+    text-align: center;
+}
+
+/* ipad version */
+@media only screen and (min-width: 1024px) and (max-width: 1919px) {}
+
+/* desktop */
+@media only screen and (min-width: 1024px) {
+
+
+    .chevrons {
+        display: none;
+    }
+
+    .about_margin {
+        padding: 0px 5.3vw 0px 5.3vw;
+    }
+
+    #top-header h1 {
+        font-size: 72px;
+    }
+
+    #top-header h2 {
+        font-size: 48px;
+    }
+
+    #middle h3 {
+        margin-top: 100px;
+        font-size: 36px;
+    }
+
+    #bottom h2 {
+        font-size: 2vw;
+    }
+
+    .about_margin p {
+        font-size: 28px;
+    }
+
+    #login_exp {
+        margin-bottom: 100px;
+    }
+
+    #login_exp a {
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+}
+
+/* aboutdiabete ipad desktop */
+@media only screen and (min-width: 1024px) {
+
+    .abtdiabete {
+        margin: 2vw 6vw;
+    }
+
+    .abtdaibete h1 {
+        font-size: 72px;
+    }
+
+    .abtdiabete img {
+        width: 60vw;
+    }
+
+    #diabeteimg {
+        width: 40vw;
+        text-align: center;
+    }
+
+    #diabete h1 {
+        font-size: 64px;
+    }
+
+    .about_us_margin p {
+        font-size: 1.6vw;
+        line-height: 2vw;
+    }
+
+
+    .whatis {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "intro video"
+            "type_intro diabeteimg1";
+        margin-bottom: 5vh;
+    }
+
+    #intro {
+        grid-area: intro;
+    }
+
+    #video {
+        text-align: center;
+        grid-area: video;
+        padding: 0 4vw;
+        margin: 0;
+        height: 70%;
+    }
+
+    #video iframe {
+        border-radius: 18px;
+        height: 40vh;
+        width: 40vw;
+    }
+
+    #type_intro {
+        grid-area: type_intro;
+    }
+
+    .diabeteimg1 {
+        grid-area: diabeteimg1;
+        text-align: center;
+        width: 40vw;
+        margin: auto;
+
+    }
+
+    .eat {
+        display: flex;
+    }
+
+    .exercise {
+        display: flex;
+    }
+
+
+    .diabeteimg3 {
+        grid-area: image3;
+    }
+
+    .howto {
+        margin-right: 3vw;
+    }
+
+    #about_tips {
+        width: 36vw;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .diabeteimg {
+        text-align: center;
+    }
+}

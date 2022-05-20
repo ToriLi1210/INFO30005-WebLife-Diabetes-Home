@@ -1,0 +1,95 @@
+<div class="patient_margin">
+    {{!-- greeting block --}}
+    <div id="greeting">
+        <h1>Hello, {{patientInfo.screenName}}</h1>
+        <p class="support_message">{{patientInfo.supportMessage}}</p>
+    </div>
+
+    {{!-- remind patient today's role --}}
+    <div id="todo_list">
+        <div id="today_requirment">
+            <ol>
+                <li>Record Blood Sugar today 7AM after breakfast</li>
+                <li>Walk at least 25 minutes today</li>
+                <li>Drink more water</li>
+                <li>Do not eat things with sugar</li>
+                <li>Record Exercises before go to bed</li>
+                <li>Sleep earlier</li>
+            </ol>
+        </div>
+        <div id="today_engagement" class="g-container">
+            <div class="g-progress" style="width:{{eRate}}%;">
+                <p class="g_progress_text">ⓘ&nbsp;Engagement&nbsp;{{eRate}}%</p>
+                <img id="badge" src="/image/Badge.svg" />
+            </div>
+
+        </div>
+    </div>
+
+    {{#with patientInfo}}
+    {{!-- leaf section --}}
+    <div id="today_reward">
+        <p class="summary">
+            <img id="leaf" src="/image/Artboard 10.svg" alt="Leaf">x{{unfinishedTaskNum}}
+            to be collected
+        </p>
+    </div>
+
+
+    <div id="tasks">
+        {{!-- patient task buttons --}}
+        {{#each needToDo}}
+        <div class="task">
+            <a href="/patient/dashboard/{{@key}}">
+                <img src="/image/{{@key}}.svg" alt="{{@key}} image" class="task_image" />
+
+                {{#ifUnrecorded this.status}}
+                <img src="/image/unrecorded.svg" alt="Done!" class="submit" />
+                {{/ifUnrecorded}}
+                {{#ifRecorded this.status}}
+                <img src="/image/recorded.svg" alt="Done!" class="submit" />
+                {{/ifRecorded}}
+                {{#ifNoNeed}}
+                {{/ifNoNeed}}
+
+                <p>{{#getUpper @key}} {{/getUpper}}</p>
+            </a>
+        </div>
+        {{/each}}
+    </div>
+
+    {{!-- tips section --}}
+    <div class="tips">
+        <h3>Tips:</h3>
+        <p class="summary">Eat more Nuts and Seeds</p>
+        <p class="content">
+            A low intake of nuts and seeds was potentially
+            linked to an increased risk of death
+            from heart disease, stroke, or type
+            2 diabetes.
+        </p>
+    </div>
+    {{/with}}
+
+</div>
+
+
+{{!-- footer --}}
+{{>footer}}
+
+{{>nav}}
+<script>
+
+    var percentage = {{{ eRate }}};
+    function badgeForm() {
+        if (percentage >= 80) {
+            //alert("engagement rate is working")
+            document.getElementById('badge').style.display = "block";
+        }
+        if (percentage < 80) {
+            //alert("no display")
+            document.getElementById('badge').style.display = "none";
+        }
+    }
+
+</script>

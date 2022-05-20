@@ -1,0 +1,73 @@
+#add_patient_page {
+    /* display: grid;
+    grid-template-columns: 480px 1440px;
+    grid-area: "left right";
+    background-color:red; */
+    display: grid;
+    grid-template-columns: 480px 1440px;
+    grid-template-rows: 1080px;
+    grid-template-areas:
+        "nav patient"
+}
+
+aside {
+    border: 1px solid #707070;
+    grid-area: nav;
+    background-color: #CADECA;
+    font-size: 24px;
+}
+
+#add_patient {
+    border: 1px solid #707070;
+    grid-area: patient;
+    background-color: #F8F8F8;
+    padding-top: 100px;
+    padding-left: 150px
+}
+
+#patient_detail {
+    padding: 70px 0px 80px;
+    margin-right: 155px;
+}
+
+.info_row {
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+}
+
+.info_row input {
+    width: 400px;
+}
+
+.info_row input::placeholder {
+    font-size: 25px;
+}
+
+.detail_required {
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.detail_required input {
+    border: 1px solid #707070;
+    border-radius: 15px;
+
+    height: 60px;
+    text-indent: 20px;
+}
+
+#create_button {
+    padding-top: 20px;
+    text-align: right;
+    margin-right: 15px;
+
+}
+
+#create_button button {
+    font-size: 25px;
+    border-radius: 50px;
+    padding: 20px 65px;
+}

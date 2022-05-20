@@ -1,0 +1,50 @@
+{{!-- comment section --}}
+<form action="" method="POST">
+    <div class="comment_record">
+
+        {{#each newRecord}}
+        {{#ifUnrecorded this.comState}}
+        <textarea maxlength="140" class="commentArea" name="comment"
+            placeholder="Enter Comments for Last Record Only After Entered Record." cols="36" rows="8"
+            required></textarea>
+        {{else}}
+        <p class="commentArea" name="comment" cols="36" rows="4">
+            {{this.comment}}
+        </p>
+        </textarea>
+        <div class="show_space"></div>
+        {{/ifUnrecorded}}
+
+        <div class="comment_button">
+            {{#ifUnrecorded this.comState}}
+            <button class="comment_upload" type="submit">Save</button>
+            {{else}}
+            {{/ifUnrecorded}}
+        </div>
+        {{/each}}
+    </div>
+</form>
+
+{{!-- go to history comment --}}
+<div class="history_comment">
+    <a href="/patient/dashboard/{{task}}/commentHistory">
+        <button class="record taskcolor" id="more_comment">
+            See more<i class="fa-solid fa-angle-right">&nbsp;</i>
+        </button>
+    </a>
+</div>
+
+<script>
+var colour = {{{colour}}}
+
+function changeStyle(){
+    const changelist = document.getElementsByClassName('taskcolor');
+     for(var i = changelist.length - 1; i >= 0; --i){
+        changelist[i].style.color=colour;
+     }
+}
+
+window.onload = function(){
+    changeStyle();
+}
+</script>

@@ -1,0 +1,19 @@
+{{!-- <div id="input_detail"> --}}
+    <div id="update_patient_detail">
+        <form action="" method="post">
+            <div class="update_input">
+                <label>Screen Name</label>
+                <input type="text" maxlength="30" name="screenName" placeholder="{{patientInfo.screenName}}">
+            </div>
+            <div class="update_input">
+                <label>Bio</label>
+                <textarea type="text" name="bio" id="bio" cols="36" rows="36"
+                    placeholder="{{patientInfo.textBio}}"></textarea>
+            </div>
+            <div id="err_msg">{{message}}</div>
+            <div id="update_button">
+                <button class="record_upload" type="submit">Submit</button>
+            </div>
+        </form>
+
+        <a href="/patient/profile"><button class="return">Back</button></a>

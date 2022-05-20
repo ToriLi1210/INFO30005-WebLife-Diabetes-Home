@@ -1,0 +1,39 @@
+{{!-- act as body --}}
+<div id="background_image">
+    <div id="main_section">
+        <div id="login">
+            <h1>Welcome To Glucope</h1>
+            <form action="" method="post">
+                <div class="login_required">
+                    <label for="email">UserID</label>
+                    <input type="email" placeholder="Enter Email Address" name="email" required>
+                </div>
+                <div class="login_required">
+                    <label for="psw">Password</label>
+                    <input type="password" name="password" required>
+                </div>
+                {{#if loginMessage}}<p style="margin-left: 50px;">{{loginMessage}}</p>{{/if}}
+                <div id="login_button">
+                    <button type="submit">Log In</button>
+                    <button><a href="/clinician/register">Register</a></button>
+                </div>
+            </form>
+        </div>
+        <div class="tour_image">
+            <img src="/image/KV.svg">
+        </div>
+        <div id="info">
+            <h2 style="font-size: 48px;">Effective</br> Communication</h2>
+            <p>
+                The practice of good communication skills in the medical profession is integral for the development of
+                meaningful and trustworthy relationship between the doctors and patients and, thus, is beneficial to
+                both of them. The diagnostic capability of the doctor is greatly enhanced because of better
+                understanding of patient’s problems. Furthermore, it is also useful in managing difficult clinical
+                encounters and thus decreases the frustration of both the doctor and the patient or attendant in
+                situations of emotional outbursts. It has also been shown to decrease work stress and increase job
+                satisfaction.</p>
+        </div>
+    </div>
+    {{!-- {{>footer}} --}}
+</div>
+{{>footer}}

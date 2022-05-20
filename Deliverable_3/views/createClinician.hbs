@@ -1,0 +1,79 @@
+<div id="add_clinician_page">
+    {{!-- hello --}}
+    <a id="backToLogin" href="/clinician"><i class="fa-solid fa-chevron-left"></i>Back</a>
+    <div id="add_clinician">
+        <h1>Join as part of Glucope</h1>
+        <form action="" method="post" id="createFunction">
+            <section id="clinician_detail">
+                <div class="detail_required">
+                    <div class="info_row">
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" onkeydown="return /[a-z]/i.test(event.key)" required>
+                    </div>
+
+                    <div class="info_row">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" onkeydown="return /[a-z]/i.test(event.key)" required>
+                    </div>
+                </div>
+
+                <div class="detail_required">
+                    <div class="info_row">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="info_row">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" placeholder="Please Enter 8-16 digit"
+                            onkeydown="return /^[A-Za-z0-9_@./#&+-]*$/.test(event.key)" required>
+                    </div>
+                </div>
+
+                <div class="detail_required">
+                    <div class="info_row">
+                        <label for="year_of_birth">Year of Birth</label>
+                        <input type="number" min="1900" max="2099" step="1" name="year" maxlength="4" placeholder="yyyy"
+                            required>
+                    </div>
+
+                    <div class="info_row">
+                        <label for="workPlace">Work Place</label>
+                        <input type="text" name="place" placeholder="" required>
+                    </div>
+                </div>
+                <div id="err_msg">{{message}}</div>
+
+                <div id="create_button">
+                    <button type="submit" onclick="notification()">Create</button>
+                    {{!-- onclick = "checkPassword()" --}}
+                </div>
+            </section>
+        </form>
+    </div>
+</div>
+{{>footer}}
+
+<script>
+    var form = document.getElementById('createFunction');
+
+    function notification() {
+        var password = document.getElementByName(password);
+        if (form.checkValidity()) {
+            alert("Successfully Registered!");
+        }
+    }
+
+    function checkPassword() {
+        var password = document.getElementByName(password);
+        if (password.length() > 16 && password.length() < 8) {
+            alert("Passwords must have at least 8 characters and upto 16 characters, containing at least two of the following: uppercase letters, lowercase letters, numbers.");
+            return false;
+        }
+    }
+
+    function hasWhiteSpace(s) {
+        return /\s/g.test(s);
+    }
+
+</script>

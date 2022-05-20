@@ -1,0 +1,11 @@
+<h2>Login Page</h2>
+<h3>click name to login:</h3>
+<ul>
+    {{!-- loops over the data set --}}
+    {{#each patientData}}
+    <li>{{this.firstName}} {{this.lastName}}</li>
+    {{/each}}
+    <a href="/patient/Login"> Patient Login </a>
+</ul>
+<br>
+<h3>This page will be finished soon.</h3>

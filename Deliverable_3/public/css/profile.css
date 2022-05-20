@@ -1,0 +1,291 @@
+.patient_profile_margin {
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 12px;
+}
+
+#update_patient_detail>textarea {
+    font-family: 'IBM Plex Mono', sans-serif;
+}
+
+#update_patient_detail input::placeholder {
+    font-family: 'IBM Plex Mono', sans-serif;
+}
+
+.update_input textarea {
+    font-family: 'IBM Plex Mono', sans-serif;
+
+}
+
+#mydetail {
+    word-wrap: break-word;
+}
+
+#myprofile {
+    border: 1px solid #707070;
+    border-radius: 20px;
+    padding: 40px 20px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    /* height: 550px; */
+    box-shadow: 3px 4px 4px #707070
+}
+
+#update_detail a {
+    color: #769176;
+    text-decoration: none;
+}
+
+.patient_profile_margin ul {
+    padding: 10px 0px;
+}
+
+#mysummary {
+    text-align: center;
+}
+
+#mysummary img {
+    height: 120px;
+    width: auto;
+
+}
+
+#mydetail,
+#update_detail {
+    margin: 20px 0px;
+
+}
+
+#update_password {
+    border: 1px solid #707070;
+}
+
+#update_password {
+    border: 1px solid #707070;
+    margin-top: 261px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px 40px;
+}
+
+.update_input {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    /* margin: 0 25%; */
+}
+
+.update_input textarea {
+    border: 1px solid #707070;
+    border-radius: 15px;
+}
+
+#update_button {
+    float: right;
+    /* display: ;
+        justify-content: space-between;
+         */
+}
+
+#update_patient_detail {
+    border: 1px solid #707070;
+    margin-top: 60%;
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px 40px;
+
+}
+
+#bio {
+    height: 100px;
+    width: 300px;
+    font-size: 16px;
+    padding: 2px;
+}
+
+#update_detail label {
+    justify-content: center;
+}
+
+#err_msg {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ff6666;
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width:1919px) {
+    #update_myinfo {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 40px;
+    }
+
+    #mydetail,
+    #update_detail {
+        margin: 20px 0px;
+        width: 400px;
+
+    }
+
+    .update_input {
+        margin-left: 55px;
+        font-size: 20px;
+    }
+
+    .update_input input {
+        font-size: 20px;
+    }
+
+    .update_input input::placeholder {
+        font-size: 20px;
+    }
+
+    #update_patient_detail a button,
+    #update_patient_detail #update_button button {
+        font-family: 'IBM Plex Mono', sans-serif;
+        font-size: 20px;
+    }
+
+    #myprofile {
+        font-size: 25px;
+    }
+
+    #bio {
+        width: 420px;
+        height: 200px;
+    }
+
+    #mysummary div p {
+        font-size: 25px;
+    }
+
+    #bio {
+        font-size: 20px;
+        padding: 3px;
+    }
+
+    #update_patient_detail {
+        margin: 261px;
+    }
+
+    #update_patient_detail {
+        border: 1px solid #707070;
+        margin: 100px 200px;
+        padding: 40px 50px;
+    }
+
+    #error_message {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .patient_profile_margin {
+        margin-top: 118px;
+        margin-left: 200px;
+        margin-right: 200px;
+        font-size: 40px;
+    }
+
+    #update_patient_detail {
+        border: 1px solid #707070;
+        margin-top: 300px;
+        border-radius: 20px;
+        background-color: white;
+        padding: 10px 40px;
+        margin-left: 600px;
+        margin-right: 710px;
+    }
+
+    label {
+        font-size: 32px;
+    }
+
+    .return {
+        margin-left: 50px;
+    }
+
+    .record_upload {
+        margin-right: 50px;
+    }
+
+    /* #myprofile{
+        height: 780px;
+    } */
+    #update_myinfo {
+        display: flex;
+        justify-content: space-between;
+        padding: 70px 150px;
+        font-size: 30px;
+    }
+
+    .patient_profile_margin ul {
+        padding: 20px 0px;
+    }
+
+    #mysummary img {
+        height: 200px;
+        margin: 0px 120px
+    }
+
+    #mysummary {
+        display: flex;
+    }
+
+    #mysummary div {
+        padding: 40px 0px;
+        text-align: left;
+        font-size: 30px;
+    }
+
+    /* #update_patient_detail{
+        height: 300px;
+        width: 400px;
+        text-align: center;
+        margin-left: 400px;
+    } */
+    .update_input {
+        margin-left: 55px;
+        font-size: 20px;
+    }
+
+    .update_input input {
+        margin-top: 20px;
+        font-size: 26px;
+    }
+
+    .update_input input::placeholder {
+        font-size: 20px;
+    }
+
+    #update_patient_detail a button,
+    #update_patient_detail #update_button button {
+        font-family: 'IBM Plex Mono', sans-serif;
+        font-size: 20px;
+    }
+
+    #myprofile {
+        font-size: 25px;
+    }
+
+    #mydetail {
+        width: 500px;
+        word-wrap: break-word;
+    }
+
+    #bio {
+        margin-top: 20px;
+        width: 420px;
+        height: 200px;
+        font-size: 22px;
+        border-radius: 15px;
+        padding: 5px;
+    }
+
+    #error_message {
+        text-align: center;
+        margin-bottom: 18px;
+    }
+}

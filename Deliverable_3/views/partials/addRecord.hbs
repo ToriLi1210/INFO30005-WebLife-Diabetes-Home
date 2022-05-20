@@ -1,0 +1,43 @@
+{{!-- record section --}}
+<div id="input_box">
+    <form action="" method="post">
+        <div id="view_input_box">
+            <div class="input_1">
+                {{#each newRecord}}
+                {{#ifUnrecorded this.status}}
+                <input id="test" type="text" name="measurement" placeholder="Measurement :" required>
+                {{else}}
+                <p class="recorded_data">{{this.value}}</p>
+                {{/ifUnrecorded}}
+                {{/each}}
+                <p class="unit">{{unit}}</p>
+            </div>
+            
+
+            <div class="input_1">
+                <p class="recorded_data">{{recordDate}}</p>
+                <p class="unit">&ensp;&ensp;&ensp;&ensp;</p>
+            </div>
+
+            {{#each newRecord}}
+            <div class="input_1">
+                {{#ifUnrecorded this.status}}
+                <input name="time" placeholder="Time:" class="inputTime" type="text" onfocus="(this.type='time')"
+                    id="time">
+                {{else}}
+                <p class="recorded_data">{{this.time}}</p>
+                {{/ifUnrecorded}}
+                <p class="unit">&ensp;&ensp;&ensp;&ensp;</p>
+            </div>
+
+            <div class="phone_record_button">
+                <button class="return" onclick="javascript:history.go(0);">Back</button>
+                {{#ifUnrecorded this.status}}
+                <button class="record_upload" type="submit">Submit</button>
+                {{else}}
+                {{/ifUnrecorded}}
+            </div>
+            {{/each}}
+        </div>
+    </form>
+</div>

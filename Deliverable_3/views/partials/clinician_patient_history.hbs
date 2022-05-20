@@ -1,0 +1,30 @@
+<div class = "record_detail">
+        <div class="region">
+            <div id="commentTitle">
+                <p class="listTitle">History</p>
+                <div>{{>searchbar}}</div>
+            </div>
+
+            <div class="wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day<i class="fa fa-fw fa-sort"></i></th>
+                            <th>Time<i class="fa fa-fw fa-sort"></i></th>
+                            <th>Detail<i class="fa fa-fw fa-sort"></i></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{#each recordData}}
+                        <tr>
+                            <td>{{this.day}}</td>
+                            <td>{{this.time}}</td>
+                            <td>{{this.value}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+         </div>
+</div>

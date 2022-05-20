@@ -1,0 +1,52 @@
+<div id="add_patient_page">
+    {{#each clinicianData}}
+    {{> sideNav }}
+    {{/each}}
+    {{!-- hello --}}
+    <div id="add_patient">
+        <h1>My profile</h1>
+        <form action="" method="post">
+            <section id="patient_detail">
+                <div class="detail_required">
+                    <div class="info_row">
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" placeholder="{{clinicianInfo.firstName}}" readonly="true">
+                    </div>
+                    <div class="info_row">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" placeholder="{{clinicianInfo.lastName}}" readonly="true">
+                    </div>
+                </div>
+                <div class="detail_required">
+                    <div class="info_row">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" placeholder="{{clinicianInfo.email}}" readonly="true">
+                    </div>
+                    <div class="info_row">
+                        <label for="workPlace">Work Place</label>
+                        <input type="text" name="Phone_number" value="{{clinicianInfo.workPlace}}">
+                    </div>
+                </div>
+                <div class="detail_required">
+                    <div class="info_row">
+                        <label for="year_of_birth">Year of Birth</label>
+                        <input type="number" min="1900" max="2099" step="1" name="year"
+                            placeholder="{{clinicianInfo.yearOfBirth}}" readonly="true">
+
+                    </div>
+                    <div class="info_row">
+                        <label for="password">Reset Password</label>
+                        <input type="text" name="password" placeholder="Enter New Password"
+                            onkeydown="return /^[A-Za-z0-9_@./#&+-]*$/.test(event.key)">
+                        <div id="err_msg">{{message}}</div>
+                    </div>
+                </div>
+
+
+                <div id="create_button">
+                    <button type="submit">submit</button>
+                </div>
+            </section>
+        </form>
+    </div>
+</div>

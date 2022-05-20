@@ -1,0 +1,137 @@
+<div class="task_margin">
+
+    {{> backToDashboard task=task}}
+    
+    <div class="history">
+        <h1 class = "taskcolor">{{#getUpper task}} {{/getUpper}}</h1>
+        <a href="/patient/dashboard/{{task}}/recordHistory">
+        <div>{{> graph}}</div>
+        </a>
+    </div>
+
+    {{!-- record button --}}
+    <div class="t_record">
+        {{#each newRecord}}
+        {{#ifRecorded this.status}}
+        <button id ="task_record" style="color: #707070;">Recorded</button>
+        {{/ifRecorded}}
+        {{#ifUnrecorded this.status}}
+        <button id = "task_record" class="{{@key}}">Record</button>
+        {{/ifUnrecorded}}
+        {{#ifNoNeed this.status}}
+        <button id="task_record" style="color: #707070;">Record</button>
+        {{/ifNoNeed}}
+        {{/each}}
+
+        {{> addRecord newRecord=newRecord recordDate=recordDate unit=unit}}
+        
+    </div>
+
+    {{!-- record section --}}
+    <div id="desk_input_box">
+        <form action="" method="POST">
+            <div class="input_1">
+                {{#each newRecord}}
+                {{#ifUnrecorded status}}
+                {{!-- onkeydown = "return /^\d*(\.\d{1,0})?$/./8/46test(event.key)" --}}
+                    {{#setInput @key}}
+                    <input type="text" min="0" max="400" name="measurement" placeholder="Measurement :" onkeyup = "value=value.replace(/^\D*(\d*(?:\.\d{0,1})?).*$/g, '$1')"  required>
+                    {{else}}
+                    <input type="number" min="0" name="measurement" placeholder="Measurement :" required>
+                    {{/setInput}}
+                {{else}}
+                <p class="recorded_data">{{value}}</p>
+                {{/ifUnrecorded}}
+                {{/each}}
+
+                <p class="unit">{{unit}}</p>
+            </div>
+
+            <div class="input_1">
+                <p class="recorded_data">{{recordDate}}</p>
+                <p class="unit">&ensp;&ensp;&ensp;&ensp;</p>
+            </div>
+
+            {{#each newRecord}}
+            <div class="input_1">
+                {{#ifUnrecorded this.status}}
+                <input placeholder="Time:" name="time" class="inputTime" type="time" onfocus="(this.type='time')"
+                    id="time">
+                {{else}}
+                <p class="recorded_data">{{this.time}}</p>
+                {{/ifUnrecorded}}
+                <p class="unit">&ensp;&ensp;&ensp;&ensp;</p>
+            </div>
+
+            <div class="ipad_record_button">
+                {{#ifUnrecorded this.status}}
+                <button class="i_record_upload" type="submit">Submit</button>
+                {{else}}
+                <div class="show_space"></div>
+                {{/ifUnrecorded}}
+            </div>
+            {{/each}}
+        </form>
+    </div>
+
+
+    {{!-- Comment Section --}}
+    <div class="t_comment">
+        <h3 class="taskcolor">Comment</h3>
+        {{>addComments newRecord=newRecord task=task}}
+    </div>
+
+    {{!-- Tips Section--}}
+    <div class="task_tips">
+        <h3>Tips: </h3>
+        <p class="summary"><b>Eat more Nuts and Seeds</b></p>
+        <p class="content">
+            A low intake of nuts and seeds was potentially
+            linked to an increased risk of death
+            from heart disease, stroke, or type
+            2 diabetes.
+        </p>
+    </div>
+
+    {{> nav}}
+
+</div>
+
+
+<script>
+    var input_box = document.getElementById("input_box");
+
+    var colour = {{{colour}}}
+    
+    function changeStyle(){
+        const changelist = document.getElementsByClassName('taskcolor');
+        //alert("hello")
+        for(var i = changelist.length - 1; i >= 0; --i){
+            changelist[i].style.color=colour;
+        }
+    }
+
+    window.onload = function(){
+        changeStyle();
+    }
+    // Get the button that opens the popup
+    var btn_record = document.getElementById("task_record");
+
+    btn_record.onclick = function () {
+        input_box.style.display = "block";
+        modal.style.display = "block";
+    }
+
+    // click submit close the window
+    var save_button = document.getElementsByClassName("save")[0];
+    save_button.onclick = function () {
+        input_box.style.display = "none";
+    }
+
+    //change colour button
+    var colour = {{{colour}}};
+    var recordcolor = getElementById('task_id')
+
+    
+
+</script>

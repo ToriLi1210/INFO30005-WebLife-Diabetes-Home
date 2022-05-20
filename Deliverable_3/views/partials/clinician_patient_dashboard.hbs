@@ -1,0 +1,175 @@
+<div class="patient_info">
+    <div class="patient_info_region">
+        <div class="back_icon">
+            <button id="back">
+                {{!-- href="/clinician/dashboard/{{patientId}}" --}}
+                <i class="fa-solid fa-angle-left"></i><a href="{{url}}"> Back</a>
+            </button>
+        </div>
+
+        <div id="patient_title">
+            <h3 class="listTitle">{{patientName}}</h3>
+        </div>
+
+        <div class="quick_note_box">
+            <div class=" quick_note_title">
+                <h3>Quick Note</h3>
+                <button class="seemore"><a href="/clinician/dashboard/{{patientId}}/notes">See more</a> <i
+                        class="fa-solid fa-angle-right">&nbsp;</i></button>
+            </div>
+            <form action="" method="post" name="myForm" onsubmit="return checkNULL()">
+                {{!-- Enter the note for patient today --}}
+                <textarea id="quick_note" maxlength="140" class="" name="quickNote"
+                    placeholder="{{node.time}}&#10;{{node.note}}&#10;Enter the note for patient" cols="36" rows="4"
+                    max-height: 180px max-width=480px></textarea>
+                <div class="saver">
+                    <button onclick="notificationNote()" class="clinician_save">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <form action="" method="post">
+            <div class="patient_task">
+
+                <div class="clinician_glucose">
+                    <a href="/clinician/dashboard/{{patientId}}/bloodSugar">
+                        <div class="task_title">
+                            <div class="select_task">
+                                <p> Glucose </p>
+                                <div class="checkbox">
+                                    {{#ifNeed patientInfo.needToDo.bloodSugar.status}}
+                                    <input type="checkbox" class="select" name="bloodSugar" checked>
+                                    {{else}}
+                                    <input type="checkbox" class="select" name="bloodSugar" value="Select">
+                                    {{/ifNeed}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="bold"> {{recordData.bloodSugar.value}} mmol/L</p>
+                    </a>
+                </div>
+
+
+                <div class="clinician_exercise">
+                    <a href="/clinician/dashboard/{{patientId}}/exercise">
+                        <div class="task_title">
+                            <div class="select_task">
+                                <p> Exercise </p>
+                                <div class="checkbox">
+                                    {{#ifNeed patientInfo.needToDo.exercise.status}}
+                                    <input type="checkbox" class="select" name="exercise" checked>
+                                    {{else}}
+                                    <input type="checkbox" class="select" name="exercise" value="Select">
+                                    {{/ifNeed}}
+                                </div>
+                            </div>
+                        </div>
+                        <p class="bold"> {{recordData.exercise.value}} Steps </p>
+                    </a>
+                </div>
+
+                <div class="clinician_weight">
+                    <a href="/clinician/dashboard/{{patientId}}/weight">
+                        <div class="task_title">
+                            <div class="select_task">
+                                <p> Weight </p>
+                                <div class="checkbox">
+                                    {{#ifNeed patientInfo.needToDo.weight.status}}
+                                    <input type="checkbox" class="select" name="weight" checked>
+                                    {{else}}
+                                    <input type="checkbox" class="select" name="weight" value="Select">
+                                    {{/ifNeed}}
+                                </div>
+                            </div>
+                        </div>
+                        <p class="bold"> {{recordData.weight.value}} kg</p>
+                    </a>
+                </div>
+
+                <div class="clinician_insulins">
+                    <a href="/clinician/dashboard/{{patientId}}/insulin">
+                        <div class="task_title">
+                            <div class="select_task">
+                                <p> Insulin</p>
+                                <div class="checkbox">
+                                    {{#ifNeed patientInfo.needToDo.insulin.status}}
+                                    <input type="checkbox" class="select" name="insulin" checked>
+                                    {{else}}
+                                    <input type="checkbox" class="select" name="insulin" value="Select">
+                                    {{/ifNeed}}
+                                </div>
+                            </div>
+                        </div>
+                        <p class="bold"> {{recordData.insulin.value}} Dose(s)</p>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="edit">
+                <button type="submit"><i class="fa fa-check-square" aria-hidden="true"></i>update </button>
+            </div>
+        </form>
+
+
+        <div class="quick_note_box">
+            <div class=" quick_note_title">
+                <h3>Support Message</h3>
+            </div>
+
+            <form action="" method="post" name="supportForm" onsubmit="return checkSupportMessage()">
+                <textarea id="quick_note" class="support_message" maxlength="140" class="" name="supportMessage"
+                    placeholder="{{patientInfo.supportMessage}}&#10Enther the support message for patient" cols="36"
+                    rows="4" max-height="180px" max-width='480px' required></textarea>
+
+                <div class="saver">
+                    <button onclick="notification()" class="clinician_save" type="submit">Send</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+    //const isEmpty = str => !str.trim().length;
+    function checkNULL() {
+        //e.preventDefault();
+        var str = document.forms["myForm"]["quickNote"].value;
+        if (!/\S/.test(str)) {
+            alert("Please do not submit a empty note");
+            return false;
+        }
+        else {
+            alert("Note saved");
+            return true;
+        }
+    }
+
+    function checkSupportMessage() {
+        var str = document.forms["supportForm"]["supportMessage"].value;
+        if (!/\S/.test(str)) {
+            alert("Please do not submit a empty Support message");
+            return false;
+        }
+        else {
+            alert("Support message saved");
+            return true;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,54 @@
+/* .clinician_patient_margin1{
+    display: grid;
+    grid-template-columns: 480px 698px 742px;
+    grid-template-rows: 1080px;
+    grid-template-areas:
+        "nav middle right";
+}
+.detail{
+    grid-area: "middle";
+} */
+
+.clinician_insulin_margin {
+    display: grid;
+    grid-template-columns: 480px 698px 742px;
+    grid-template-rows: 1080px;
+    grid-template-areas:
+        "nav middle right";
+
+}
+
+.clinician_exercise_margin {
+    display: grid;
+    grid-template-columns: 480px 698px 742px;
+    grid-template-rows: 1080px;
+    grid-template-areas:
+        "nav middle right";
+}
+
+.clinician_weight_margin {
+    display: grid;
+    grid-template-columns: 480px 698px 742px;
+    grid-template-rows: 1080px;
+    grid-template-areas:
+        "nav middle right";
+}
+
+.clinician_patient_task_margin {
+    display: grid;
+    grid-template-columns: 480px 698px 742px;
+    grid-template-rows: 1080px;
+    grid-template-areas:
+        "nav middle right";
+}
+
+.task_detail {
+    /* grid-area: right; */
+    border: 1px solid #707070
+}
+
+.patient_info {
+    grid-area: middle;
+}
+
+/* 中间四个task 右边单独task */

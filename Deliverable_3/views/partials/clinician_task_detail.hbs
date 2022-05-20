@@ -1,0 +1,74 @@
+<div class = "task_detail">
+    <div class="region">
+      <a href = "{{url2}}">
+        <div id="Task_title">
+            <p class="listTitle" id = "taskcolor">{{task}}</p>
+        </div>
+        <div><canvas id="myChart"></canvas></div>
+      </a>
+      
+      <form action="" method="post" id = "setRange">
+            <p class = "small_title">Set range</p>
+            <div id = "range">
+              {{#setInput task}}
+                <input type="text" placeholder="{{rangeInformation.min}} Min" name="min" onkeyup="value=value.replace(/^\D*(\d*(?:\.\d{0,1})?).*$/g, '$1')">
+                    <span class="divider"></span>
+                <input type="text" placeholder="{{rangeInformation.max}} Max" name="max" onkeyup = "value=value.replace(/^\D*(\d*(?:\.\d{0,1})?).*$/g, '$1')" >
+              {{else}}
+                <input type="number" placeholder="{{rangeInformation.min}} Min" name="min">
+                    <span class="divider"></span>
+                <input type="number" placeholder="{{rangeInformation.max}} Max" name="max">
+              {{/setInput}}
+            </div>
+            <div class = "edit">
+                    <button onclick="notification()" type="submit"><i class='far fa-edit'></i>Update</button>
+            </div>
+      </form>
+    {{>small_comment}}
+    </div>
+</div>
+
+<script>
+var xValues = {{{date}}};
+var yValues = {{{data}}};
+var typ={{{graphType}}}
+var colour = {{{colour}}}
+new Chart("myChart", {
+  type: typ,
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill:false,
+      data: yValues,
+      borderRadius: 100,
+      borderColor: colour,
+      backgroundColor: colour,
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{
+          display: true,
+          ticks: {min: 0},
+          position: 'right',
+      }],
+      xAxes: [{
+          display:true
+      }],
+    }
+  }
+});
+
+var form = document.getElementById('createFunction');
+
+function notification() {
+  alert("Range Update Successful!");
+}
+function changeStyle(){
+  document.getElementById('taskcolor').style.color=colour;
+}
+window.onload = function(){
+     changeStyle();
+}
+</script>
