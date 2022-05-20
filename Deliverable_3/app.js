@@ -13,7 +13,7 @@ require('./passport')(passport)
 app.use(flash())
 app.use(
     session({
-        secret: process.env.SESSION_SECRET,
+        secret: process.env.SESSION_SECRET || "webLife",
         name: 'glucope',
         resave: false,
         saveUninitialized: false,
