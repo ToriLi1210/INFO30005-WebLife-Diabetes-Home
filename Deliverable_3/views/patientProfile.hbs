@@ -2,31 +2,39 @@
     {{>backToDashboard}}
 
     <div id="myprofile">
-        <div id="myinfo"> 
+        <div id="myinfo">
             <div id="mysummary">
                 <img src="/image/patient_avatar.svg" alt="patient">
-                <div id = "myName">
-                    <p>{{patientInfo.screenName}}<p>
-                    <p>{{patientInfo.firstName}} {{patientInfo.lastName}}<p>
+                <div id="myName">
+                    <p>{{patientInfo.screenName}}
+                    <p>
+                    <p>{{patientInfo.firstName}} {{patientInfo.lastName}}
+                    <p>
                     <p>{{age}}</p>
                 </div>
             </div>
         </div>
-        <div id = "update_myinfo">
+        <div id="update_myinfo">
             <div id="mydetail">
                 <ul>Screen Name: <span>{{patientInfo.screenName}}</span></ul>
                 <ul>Year of Birth: <span>{{patientInfo.yearOfBirth}}</span></ul>
                 <ul>Clinician Name: <span>{{clinicianName}}</span></ul>
                 <ul>Bio: <span>{{patientInfo.textBio}}</span></ul>
             </div>
-            <div id ="update_detail" >
-                <a id= "reset_box" href="/patient/profile/updatePassword"><ul>Update My Password</ul></a>
+            <div id="update_detail">
+                <a id="reset_box" href="/patient/profile/updatePassword">
+                    <ul>Update My Password</ul>
+                </a>
                 {{!-- {{> updatePassword}}onclick="openForm()" --}}
-                <a id= "change_detail_box" href = "/patient/profile/updatePersonalDetail" ><ul>Change Personal Details</ul></a>
+                <a id="change_detail_box" href="/patient/profile/updatePersonalDetail">
+                    <ul>Change Personal Details</ul>
+                </a>
                 {{!-- {{> updatepatientProfile}}onclick="openForm()" --}}
-                <a href ="/patient/logout"><ul>Log Out</ul></a>
+                <a href="/patient/logout">
+                    <ul>Log Out</ul>
+                </a>
             </div>
-        </div> 
+        </div>
     </div>
 
 </div>
@@ -47,7 +55,7 @@
     //save_button.onclick = function () {
      //   input_box.style.display = "none";
     //}
-    
+
 
 
 </script>

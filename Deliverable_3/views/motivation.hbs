@@ -1,11 +1,11 @@
-<div class = "motivation_page">
-    <div class ="back_button">    
+<div class="motivation_page">
+    <div class="back_button">
         {{> backToDashboard}}
     </div>
 
-    <div class = "motivation">
-        <div class = "ranking">
-            <h1 id = "page_title">Achievements</h1>
+    <div class="motivation">
+        <div class="ranking">
+            <h1 id="page_title">Achievements</h1>
 
             <div id="top5_rank">
                 <div id="engagement">
@@ -13,51 +13,51 @@
                     <p>Engagement Top 5</p>
                 </div>
 
-                <div id="podium-box" class="row" >
+                <div id="podium-box" class="row">
                     <div class="col-md-4 step-container m-0 p-0">
-                        <div id = "winner2">
-                        {{second.screenName}}
+                        <div id="winner2">
+                            {{second.screenName}}
                         </div>
                         <div id="second-step" class="bg-blue step centerBoth podium-number">
-                        2
+                            2
                         </div>
                     </div>
                     <div class="col-md-4 step-container m-0 p-0">
-                        <div id = "winner1">
-                        {{first.screenName}}
+                        <div id="winner1">
+                            {{first.screenName}}
                         </div>
                         <div id="first-step" class="bg-blue step centerBoth podium-number">
-                        1
+                            1
                         </div>
                     </div>
                     <div class="col-md-4 step-container m-0 p-0">
-                        <div id ="winner3">
-                        {{third.screenName}}
+                        <div id="winner3">
+                            {{third.screenName}}
                         </div>
                         <div id="third-step" class="bg-blue step centerBoth podium-number">
-                        3
+                            3
                         </div>
                     </div>
                 </div>
 
                 <div class="rest">
-                    <div id = "fourth_step" >
-                        <p class = "podium-number1">4</p>
+                    <div id="fourth_step">
+                        <p class="podium-number1">4</p>
                     </div>
                     <p class="rest_name">{{fourth.screenName}}</p>
                 </div>
 
                 <div class="rest">
-                    <div id = "fifth_step",class="podium-number ">
-                    <p class = "podium-number1">5</p>
+                    <div id="fifth_step" ,class="podium-number ">
+                        <p class="podium-number1">5</p>
                     </div>
 
                     <p class="rest_name">{{fifth.screenName}}</p>
                 </div>
 
                 <div class="current_position">
-                    <div id = "me_step",class="podium-number ">
-                    <p class = "podium-number1">{{position}}</p>
+                    <div id="me_step" ,class="podium-number ">
+                        <p class="podium-number1">{{position}}</p>
                     </div>
                     <p class="me_name">{{screenName}} (ME)</p>
                 </div>
@@ -65,12 +65,11 @@
             </div>
         </div>
 
-        <div class = "tree_board">
-            <img src ="/image/tree{{image}}.svg"></img>
+        <div class="tree_board">
+            <img src="/image/tree{{image}}.svg"></img>
         </div>
 
     </div>
 </div>
 
 {{>nav}}
-

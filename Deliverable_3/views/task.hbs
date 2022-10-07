@@ -1,11 +1,11 @@
 <div class="task_margin">
 
     {{> backToDashboard task=task}}
-    
+
     <div class="history">
-        <h1 class = "taskcolor">{{#getUpper task}} {{/getUpper}}</h1>
+        <h1 class="taskcolor">{{#getUpper task}} {{/getUpper}}</h1>
         <a href="/patient/dashboard/{{task}}/recordHistory">
-        <div>{{> graph}}</div>
+            <div>{{> graph}}</div>
         </a>
     </div>
 
@@ -13,10 +13,10 @@
     <div class="t_record">
         {{#each newRecord}}
         {{#ifRecorded this.status}}
-        <button id ="task_record" style="color: #707070;">Recorded</button>
+        <button id="task_record" style="color: #707070;">Recorded</button>
         {{/ifRecorded}}
         {{#ifUnrecorded this.status}}
-        <button id = "task_record" class="{{@key}}">Record</button>
+        <button id="task_record" class="{{@key}}">Record</button>
         {{/ifUnrecorded}}
         {{#ifNoNeed this.status}}
         <button id="task_record" style="color: #707070;">Record</button>
@@ -24,7 +24,7 @@
         {{/each}}
 
         {{> addRecord newRecord=newRecord recordDate=recordDate unit=unit}}
-        
+
     </div>
 
     {{!-- record section --}}
@@ -34,11 +34,12 @@
                 {{#each newRecord}}
                 {{#ifUnrecorded status}}
                 {{!-- onkeydown = "return /^\d*(\.\d{1,0})?$/./8/46test(event.key)" --}}
-                    {{#setInput @key}}
-                    <input type="text" min="0" max="400" name="measurement" placeholder="Measurement :" onkeyup = "value=value.replace(/^\D*(\d*(?:\.\d{0,1})?).*$/g, '$1')"  required>
-                    {{else}}
-                    <input type="number" min="0" name="measurement" placeholder="Measurement :" required>
-                    {{/setInput}}
+                {{#setInput @key}}
+                <input type="text" min="0" max="400" name="measurement" placeholder="Measurement :"
+                    onkeyup="value=value.replace(/^\D*(\d*(?:\.\d{0,1})?).*$/g, '$1')" required>
+                {{else}}
+                <input type="number" min="0" name="measurement" placeholder="Measurement :" required>
+                {{/setInput}}
                 {{else}}
                 <p class="recorded_data">{{value}}</p>
                 {{/ifUnrecorded}}
@@ -101,17 +102,17 @@
 <script>
     var input_box = document.getElementById("input_box");
 
-    var colour = {{{colour}}}
-    
-    function changeStyle(){
+    var colour = {{{ colour }}}
+
+    function changeStyle() {
         const changelist = document.getElementsByClassName('taskcolor');
         //alert("hello")
-        for(var i = changelist.length - 1; i >= 0; --i){
-            changelist[i].style.color=colour;
+        for (var i = changelist.length - 1; i >= 0; --i) {
+            changelist[i].style.color = colour;
         }
     }
 
-    window.onload = function(){
+    window.onload = function () {
         changeStyle();
     }
     // Get the button that opens the popup
@@ -129,9 +130,9 @@
     }
 
     //change colour button
-    var colour = {{{colour}}};
+    var colour = {{{ colour }}};
     var recordcolor = getElementById('task_id')
 
-    
+
 
 </script>
